@@ -7,10 +7,61 @@
 	color: #fff;
 }
 
+.pagetitle {
+	text-align: center;
+	color: #373736;
+	font-family: @font-alt;
+	font-size: 48px;
+	font-weight: 500;
+	letter-spacing: 15px;
+}
+
+.breadcrumb {
+	margin-bottom: 67px;
+	position: relative;
+	&::after {
+		content: '';
+		width: 799px;
+		height: 1px;
+		position: absolute;
+		bottom: -1px;
+		left: 50%;
+		right: 50%;
+		background-color: rgba(140, 140, 140, 0.4);
+	}
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li { 
+        color: #666666;
+		font-weight: 400;
+		&.active {
+			padding: 31px 0 27px;
+		}
+        a {
+        	padding: 31px 0 27px;
+        	font-size: 18px;
+        	color: #666666;
+			font-weight: 400;
+	        &:hover {
+	        	color: #666666;
+	            text-decoration: underline;
+	        }
+        }
+    }
+    .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
+        content: '→';
+		margin: 0 10px;
+    }
+	@media (max-width: @breakpoint-xsmall-max) {
+		display: none;
+	}
+}
+
 .button-intro {
 	color: #fefefe;
-	font-size: 18px;
-	line-height: 60px;
+	line-height: 1;
 	background-color: #c00;
 	padding: 0 40px;
 	transition: all ease .3s;
