@@ -19,14 +19,15 @@
 .breadcrumb {
 	margin-bottom: 67px;
 	position: relative;
-	&::after {
+	&:after {
 		content: '';
 		width: 799px;
 		height: 1px;
 		position: absolute;
+		display: block;
 		bottom: -1px;
 		left: 50%;
-		right: 50%;
+		transform: translateX(-50%);
 		background-color: rgba(140, 140, 140, 0.4);
 	}
     ul {
