@@ -9,16 +9,26 @@
 	</div>
 	<h1 class="pagetitle">{$_modx->resource.longtitle ?: $_modx->resource.pagetitle}</h1>
 	<div class="contacts">
-		<div class="contacts__background-image"></div>
-		<address class="contacts__info">
-			<div class="uk-grid uk-grid-collapse uk-child-width-1-2">
+		<div class="contacts__bg-image" style="background: url('{$_modx->resource['contacts.bg-image']}') no-repeat 50% 50%"></div>
+		<address class="contacts-info">
+			<div class="uk-grid uk-grid-collapse uk-child-width-1-2@s">
 				<div>
-					Почта@почта<br>
-					Телефон<br>
-					еще какие-то данные, если надо будет
+					<div class="contacts-info__col">
+						<div class="contacts-info__row">
+							Почта@почта
+						</div>
+						<div class="contacts-info__row">
+							Телефон
+						</div>
+						<div class="contacts-info__row">
+							еще какие-то данные, если надо будет
+						</div>
+					</div>
 				</div>
 				<div>
-					Аккаунты в соцсетях (не кнопки, они есть в меню)
+					<div class="contacts-info__col">
+						Аккаунты в соцсетях (не кнопки, они есть в меню)
+					</div>
 				</div>
 			</div>
 		</address>
@@ -27,27 +37,28 @@
 				Есть вопросы?<br>Пишите нам
 			</div>
 			<form>
-				<div class="form-row">
-					<input type="text" class="uk-input">
+				<div class="contacts-input-row">
+					<input type="text" class="contacts-input uk-input" placeholder="Представьтесь">
 				</div>
-				<div class="form-row">
-					<input type="email" class="uk-input">
+				<div class="contacts-input-row">
+					<input type="email" class="contacts-input uk-input" placeholder="Электронная почта*" required>
 				</div>
-				<div class="form-row">
-					<input type="phone" class="uk-input">
+				<div class="contacts-input-row">
+					<input type="tel" class="contacts-input uk-input" placeholder="Укажите телефон">
 				</div>
-				<div class="form-row">
-					<textarea class="uk-textarea"></textarea>
+				<div class="contacts-textarea-row">
+					<textarea class="contacts-textarea uk-textarea" rows="5" placeholder="Сообщение"></textarea>
 				</div>
-				<div class="form-row">
-					<input type="checkbox" class="uk-checkbox" name="contacts-conditions">
-					<div class="contacts-conditions">
+				<div class="contacts-input-row uk-flex uk-flex-top">
+					<input type="checkbox" id="contacts-conditions" class="uk-checkbox contacts-checkbox" name="contacts-conditions">
+					<label for="contacts-conditions" class="contacts__conditions">
 						Нажимая “Отправить”, подтверждаю, что прочитал(-а) <a href="#">Конфиденциальное соглашение</a> и соглашаюсь с <a href="#">Политикой обработки персональных данных</a>
-					</div>
+					</label>
 				</div>
-				<button class="uk-button button--pointer">Отправить</button>
-
-
-
+				<button class="uk-button button-intro button-intro--contacts">Отправить<span class="button-intro__arrow"></span></button>
+			</form>
+		</div>
+	</div>
 </div>
+<div class="substrate substrate--contacts"></div>
 {/block}
