@@ -1,0 +1,157 @@
+.contacts {
+	position: relative;
+}
+
+.substrate--contacts {
+	height: 761px;
+}
+
+.contacts__bg-image {
+	width: 1300px;
+	min-height: 600px;
+	position: relative;
+	margin-left: -100px;
+	@media (max-width: @breakpoint-xsmall-max) {
+		display: none;
+	}
+}
+
+.contacts-info {
+	position: absolute;
+	top: -120px;
+	right: 0;
+	width: 600px;
+	min-height: 300px;
+	box-sizing: border-box;
+	padding: 18px 18px 18px 0;
+	background-color: #4d4d4c;
+	color: #ffffff;
+	&::before {
+		content: '';
+		width: 1px;
+		height: ~"calc(100% - 36px)";
+		position: absolute;
+		top: 18px;
+		left: 50%;
+		background-color: rgba(255, 255, 255, 0.48);
+	}
+	@media (max-width: @breakpoint-xsmall-max) {
+		position: static;
+		width: 100%;
+		height: auto;
+		padding: 18px 0;
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.contacts-info__col {
+	padding-top: 20px;
+	padding-left: 40px;
+}
+
+.contacts-info__row {
+	margin-bottom: 9px;
+}
+
+.contacts-form {
+	position: relative;
+	bottom: 100px;
+	left: -100px;
+	width: 600px;
+	box-sizing: border-box;
+	padding: 50px 98px 119px;
+	background-color: #f7f7f4;
+	@media (max-width: @breakpoint-medium-max) {
+		left: 0;
+	}
+	@media (max-width: @breakpoint-small-max) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@media (max-width: @breakpoint-xsmall-max) {
+		position: static;
+		width: 100%;
+		padding: 10px;
+		transform: none;
+		margin-bottom: 100px;
+	}
+}
+
+.contacts-form__title {
+	margin-bottom: 46px;
+	font-size: 30px;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.contacts-placeholder {
+	color: #999999;
+	font-family: Rubik;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 36px;
+}
+
+.contacts-input {
+	padding-left: 0;
+	background-color: #f7f7f4;
+	border-bottom: 1px solid #cccccc;
+	height: 32px;
+}
+
+.contacts-textarea { 
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	background: url('../img/bg-textarea.png') 0 0 repeat;
+	line-height: 32px;
+}
+
+.contacts-input, .contacts-textarea {
+	&::-webkit-input-placeholder {
+		.contacts-placeholder;
+	}
+	&::-moz-placeholder { 
+		.contacts-placeholder;
+	} 
+	&:-moz-placeholder {
+		.contacts-placeholder;
+	} 
+	&:-ms-input-placeholder {
+		.contacts-placeholder;
+	}
+}
+
+.contacts-input-row {
+	margin-bottom: 15px;
+}
+
+.contacts-textarea-row {
+	margin: 50px 0 25px;
+}
+
+.contacts-checkbox {
+	margin-top: 2px;
+	margin-right: 14px;
+}
+
+.contacts__conditions {
+	color: #666666;
+	font-size: 14px;
+	line-height: 1.2;
+	cursor: pointer;
+	a {
+		color: #666666;
+		text-decoration: underline;
+	}
+}
+
+.button-intro--contacts {
+	margin-top: 22px;
+	padding: 24px 53px 20px 63px;
+	.button-intro__arrow {
+		margin-left: 34px;
+	}
+}
