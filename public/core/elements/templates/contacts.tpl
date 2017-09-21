@@ -60,5 +60,5 @@
 		</div>
 	</div>
 </div>
-<div class="substrate substrate--contacts"></div>
+<div class="substrate"></div>
 {/block}
