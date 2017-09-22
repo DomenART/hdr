@@ -7,10 +7,34 @@
 
 var slideshow = document.getElementById('slideshow');
 var slideBar = document.getElementById('slide-bar');
-window.addEventListener('scroll', function(e) {
-	if(window.scrollY > slideshow.offsetHeight - window.innerHeight) {
-		slideBar.classList.add('slide-bar--sticky');
-	} else {
-		slideBar.classList.remove('slide-bar--sticky');
+
+if (slideshow && slideBar) {
+	window.addEventListener('scroll', function(e) {
+		if (window.scrollY > slideshow.offsetHeight - window.innerHeight) {
+			slideBar.classList.add('slide-bar--sticky');
+		} else {
+			slideBar.classList.remove('slide-bar--sticky');
+		}
+	});
+}
+
+// Вывод фданных по проекту шаблона "Проект"
+
+var projectItem = document.querySelectorAll('.js-project-item'),
+	projectLeftCol = document.getElementById('project-pool-left'),
+	projectRightCol = document.getElementById('project-pool-right'),
+	project_left_height = 0,
+	project_right_height = 0;
+
+if (projectItem) {
+	for (var i = 1; i < projectItem.length; i++) {
+		if (project_left_height < project_right_height) {
+			project_left_height += projectItem[i].offsetHeight;
+		}
+		else {
+			projectLeftCol.removeChild(projectItem[i]);
+			projectRightCol.appendChild(projectItem[i]);
+			project_right_height += projectItem[i].offsetHeight;
+		};
 	}
-});
+}

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tickets',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b65eee34d157d582e4568f5dd814257b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '431cffb1b26e32a4e57c3959bdcefa37',
+  'native_key' => 'mgr_tree_icon_ticket',
+  'object' => '{"key":"mgr_tree_icon_ticket","value":"icon icon-comment-o","xtype":"textfield","namespace":"tickets","area":"tickets.main","editedon":null}',
+);
