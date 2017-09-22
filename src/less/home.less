@@ -183,33 +183,12 @@
 }
 
 .slide-bar {
-	position: fixed;
-	width: 1600px;
-	max-width: 100%;
-	left: 50%;
-	bottom: 0;
-	margin-left: -800px;
-	background-color: #fff;
-	overflow: hidden;
-    padding: 32px 10px;
-    box-sizing: border-box;
-
-    &--sticky {
+    .control-bar(fixed);
+      &--sticky {
         position: absolute;
     }
-
-    @media (max-width: 1600px) {
-        margin-left: 0;
-        left: 0;
-    }
-    @media (max-width: @breakpoint-small-max) {
-        padding-left: 44px;
-        padding-right: 44px;
-    }
-    @media (max-width: @breakpoint-xsmall-max) {
-        padding: 12px 0;
-    }
 }
+
 .slide-bar__arrows {
 	float: left;
 
