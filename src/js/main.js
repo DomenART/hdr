@@ -5,12 +5,35 @@
 // UIkit.use(Icons)
 
 
-var slideshow = document.getElementById('slideshow');
-var slideBar = document.getElementById('slide-bar');
-window.addEventListener('scroll', function(e) {
-	if(window.scrollY > slideshow.offsetHeight - window.innerHeight) {
-		slideBar.classList.add('slide-bar--sticky');
+var slideshow = document.getElementById('slideshow'),
+	slideBar = document.getElementById('slide-bar');
+
+if(slideshow && slideBar) {
+	window.addEventListener('scroll', function(e) {
+		if(window.scrollY > slideshow.offsetHeight - window.innerHeight) {
+			slideBar.classList.add('slide-bar--sticky');
+		} else {
+			slideBar.classList.remove('slide-bar--sticky');
+		}
+	});
+}
+
+
+if(window.innerWidth > 960) {
+	var slideBarSocial = document.querySelector('.slide-bar__social'),
+		toolBarSocial = document.querySelector('.toolbar__social');
+
+	if(slideBarSocial) {
+		var slideBarSocialTop = slideBarSocial.getBoundingClientRect().top;
+
+		window.addEventListener('scroll', function(e) {
+			if(window.scrollY > slideBarSocialTop) {
+				toolBarSocial.classList.add('toolbar__social--visible');
+			} else {
+				toolBarSocial.classList.remove('toolbar__social--visible');
+			}
+		});
 	} else {
-		slideBar.classList.remove('slide-bar--sticky');
+		toolBarSocial.classList.add('toolbar__social--visible');
 	}
-});
+}
