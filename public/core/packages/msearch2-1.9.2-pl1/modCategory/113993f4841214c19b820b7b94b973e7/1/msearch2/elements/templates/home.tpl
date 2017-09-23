@@ -1,1 +1,0 @@
-<div id="msearch2-panel-home-div"></div>
