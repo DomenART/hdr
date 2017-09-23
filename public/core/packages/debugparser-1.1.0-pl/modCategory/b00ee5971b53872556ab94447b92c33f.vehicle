@@ -1,0 +1,141 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '3423a2f8e5503154c31cad2f70e4d17a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"debugParser","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"if (empty($_REQUEST[\'debug\']) || !$modx->user->hasSessionContext(\'mgr\') || $modx->context->key == \'mgr\') {\\n\\treturn;\\n}\\n\\nswitch ($modx->event->name) {\\n\\n\\tcase \'OnHandleRequest\':\\n\\t\\tif ($modx->parser instanceof pdoParser && $modx->loadClass(\'debugPdoParser\', MODX_CORE_PATH . \'components\\/debugparser\\/model\\/\', false, true)) {\\n\\t\\t\\t$modx->parser = new debugPdoParser($modx);\\n\\t\\t}\\n\\t\\telseif ($modx->loadClass(\'debugParser\', MODX_CORE_PATH . \'components\\/debugparser\\/model\\/\', false, true)) {\\n\\t\\t\\t$modx->parser = new debugParser($modx);\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'OnWebPageInit\':\\n\\t\\tif (method_exists($modx->parser, \'clearCache\') && empty($_REQUEST[\'cache\'])) {\\n\\t\\t\\t$modx->parser->clearCache();\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'OnLoadWebPageCache\':\\n\\t\\tif (property_exists($modx->parser, \'from_cache\')) {\\n\\t\\t\\t$modx->parser->from_cache = true;\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'OnWebPagePrerender\':\\n\\t\\tif (method_exists($modx->parser, \'generateReport\')) {\\n\\t\\t\\t$modx->parser->generateReport();\\n\\t\\t}\\n\\t\\tbreak;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/debugparser\\/elements\\/plugins\\/plugin.debugparser.php","content":"if (empty($_REQUEST[\'debug\']) || !$modx->user->hasSessionContext(\'mgr\') || $modx->context->key == \'mgr\') {\\n\\treturn;\\n}\\n\\nswitch ($modx->event->name) {\\n\\n\\tcase \'OnHandleRequest\':\\n\\t\\tif ($modx->parser instanceof pdoParser && $modx->loadClass(\'debugPdoParser\', MODX_CORE_PATH . \'components\\/debugparser\\/model\\/\', false, true)) {\\n\\t\\t\\t$modx->parser = new debugPdoParser($modx);\\n\\t\\t}\\n\\t\\telseif ($modx->loadClass(\'debugParser\', MODX_CORE_PATH . \'components\\/debugparser\\/model\\/\', false, true)) {\\n\\t\\t\\t$modx->parser = new debugParser($modx);\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'OnWebPageInit\':\\n\\t\\tif (method_exists($modx->parser, \'clearCache\') && empty($_REQUEST[\'cache\'])) {\\n\\t\\t\\t$modx->parser->clearCache();\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'OnLoadWebPageCache\':\\n\\t\\tif (property_exists($modx->parser, \'from_cache\')) {\\n\\t\\t\\t$modx->parser->from_cache = true;\\n\\t\\t}\\n\\t\\tbreak;\\n\\n\\tcase \'OnWebPagePrerender\':\\n\\t\\tif (method_exists($modx->parser, \'generateReport\')) {\\n\\t\\t\\t$modx->parser->generateReport();\\n\\t\\t}\\n\\t\\tbreak;\\n}"}',
+        'guid' => '8bb75d9baeab524239168002a706343b',
+        'native_key' => NULL,
+        'signature' => '153cca26b71ebb73e5fb87c0be818e6c',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '7f6bf0674f783434e4c1c58d4e11f8f9' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnHandleRequest","priority":0,"propertyset":0}',
+              'guid' => '65bb5285dc4068e3da9cb92580ebcfd3',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnHandleRequest',
+              ),
+              'signature' => '8dcac71f37b2cd89ecafd81794803158',
+            ),
+            '4ef5ada3ad6cad07602e7800c0665735' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+              'guid' => '90d231663984c603855f770667c5cf4d',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPagePrerender',
+              ),
+              'signature' => 'b83c60cfe39d5b3c8680c31ff5c57e01',
+            ),
+            '102acd47c909f26a27777a1a66d1ec02' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPageInit","priority":0,"propertyset":0}',
+              'guid' => '09b91133b5aebd6b076a6a43c9d339ea',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPageInit',
+              ),
+              'signature' => '336e00581b23cc6913dc613ff0d7a5d1',
+            ),
+            'bb1897227b2f83690f694f8a641e284b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnLoadWebPageCache","priority":0,"propertyset":0}',
+              'guid' => 'e1915571b0870b74f5a6985e060fd99a',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnLoadWebPageCache',
+              ),
+              'signature' => '3a39cb9bb3f655f43637480430ecba87',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'debugparser',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"debugparser-1.1.0-pl\\/modCategory\\/b00ee5971b53872556ab94447b92c33f\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"debugparser"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cd50533c2f776a9a5bcca6d63c85092a',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'b00ee5971b53872556ab94447b92c33f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"debugParser","rank":0}',
+);
