@@ -60,6 +60,27 @@ for(var i = 0; i < portfolioItems.length; i++) {
 	}
 }
 
+// Вывод фданных по проекту шаблона "Проект"
+
+var projectItem = document.querySelectorAll('.js-project-item'),
+	projectLeftCol = document.getElementById('project-pool-left'),
+	projectRightCol = document.getElementById('project-pool-right'),
+	project_left_height = 0,
+	project_right_height = 0;
+
+if (projectItem) {
+	for (var i = 1; i < projectItem.length; i++) {
+		if (project_left_height < project_right_height) {
+			project_left_height += projectItem[i].offsetHeight;
+		}
+		else {
+			projectLeftCol.removeChild(projectItem[i]);
+			projectRightCol.appendChild(projectItem[i]);
+			project_right_height += projectItem[i].offsetHeight;
+		};
+	}
+}
+
 /*import Vue from 'vue/dist/vue.js'
 // var Vue = require('vue')
 // var comprasion = require('./components/comprasion.vue')
