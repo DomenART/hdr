@@ -14,4 +14,4 @@
 
 <link rel="canonical" href="{$_modx->resource.id | url : ['scheme' => 'full']}">
 <base href="{'site_url' | config}">
-<link rel="stylesheet" href="assets/template/css/main.css?v={rand()}" type="text/css">
+<link rel="stylesheet" href="assets/template/main.css?v={rand()}" type="text/css">
