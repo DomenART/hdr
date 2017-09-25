@@ -104,108 +104,345 @@
 		</div>
 	</div>
 
-	<div id="second">
-		
-	</div>
+	<section class="section-about" id="second">
+		<div class="uk-container">
+			<div class="section-about__desc">{$_modx->resource.description}</div>
+			<h1 class="section-about__title">{$_modx->resource.longtitle ?: $_modx->resource.pagetitle}</h1>
+			<div class="section-about__content">{$_modx->resource.content}</div>
+		</div>
+	</section>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<section class="section-directions">
+		<div class="uk-container">
+			<div class="dierctions uk-grid uk-grid-collapse">
+				<div class="uk-width-1-2">
+					<a href="" class="dierction-styles uk-flex uk-flex-middle">
+						<span class="dierction-styles__title">Исторические стили интерьера</span>
+					</a>					
+				</div>
+
+				<div class="uk-width-1-2">
+					<div class="dierction-consult">
+						
+					</div>
+				</div>
+
+				<div class="uk-width-1-2">
+					<div class="dierction-design uk-flex uk-flex-middle">
+						<div class="dierction-design__image"></div>
+						<div class="dierction-design__container">
+							<div class="dierction-design__title">Дизайн-проекты</div>
+							<ul class="dierction-design__list">
+								<li><a href="">квартир</a></li>
+								<li><a href="">загородных домов</a></li>
+								<li><a href="">офисов</a></li>
+								<li><a href="">коммерческой недвижимости</a></li>
+								<li><a href="">общественных заведений</a></li>
+								<li><a href="">магазинов, ресторанов и кафе</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="uk-width-1-2">
+					<a href="" class="dierction-interior">
+						<span class="dierction-interior__image"></span>
+						<span class="dierction-interior__title">
+							Качественный<br>
+							и функциональный интерьер
+						</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section-portfolio">
+		<div class="uk-container">
+			<div class="section-title">
+				<span class="section-title__text">
+					Портфолио
+					<a href="#" class="section-title__all">смотреть все</a>
+				</span>
+			</div>
+
+			<div class="uk-grid uk-grid-collapse uk-child-width-1-2">
+				<div>
+					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-1.jpg" alt="" class="home-portfolio-item__image" uk-cover>
+						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__desc">Название проекта</span>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-2.jpg" alt="" class="home-portfolio-item__image" uk-cover>
+						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__desc">Название проекта</span>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-3.jpg" alt="" class="home-portfolio-item__image" uk-cover>
+						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__desc">Название проекта</span>
+					</a>
+				</div>
+				<div>
+					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-4.jpg" alt="" class="home-portfolio-item__image" uk-cover>
+						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__desc">Название проекта</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-working">
+		<div class="uk-container">
+			<div class="section-title section-title--dark">
+				<span class="section-title__text">
+					Как мы работаем
+				</span>
+			</div>
+
+
+			<div class="working-list uk-grid uk-grid-collapse uk-child-width-1-4">
+				<div class="working-item uk-cover-container">
+					<img src="assets/template/img/working-1.jpg" alt="" class="working-item__image" uk-cover>
+					<div class="working-item__container">
+						<div class="working-item__title">Дизайнер планирует пространство</div>
+						<div class="working-item__desc">
+							<p>Это основа дизайн-проекта, на этом этапе студия дизайна интерьера прорисовывает не менее 3-х вариантов планировочных решений каждого помещения и уже из них вы</p>
+							<p>Дизайн-проект вашего дома, выполненный по такой продуманной системе, обеспечит сокращение непредвиденных расходов на возможную перепланировку в процессе строительства.</p>
+						</div>
+					</div>
+				</div>
+				<div class="working-item uk-cover-container">
+					<img src="assets/template/img/working-2.jpg" alt="" class="working-item__image" uk-cover>
+					<div class="working-item__container">
+						<div class="working-item__title">Дизайнер планирует пространство</div>
+						<div class="working-item__desc">
+							<p>Это основа дизайн-проекта, на этом этапе студия дизайна интерьера прорисовывает не менее 3-х вариантов планировочных решений каждого помещения и уже из них вы</p>
+							<p>Дизайн-проект вашего дома, выполненный по такой продуманной системе, обеспечит сокращение непредвиденных расходов на возможную перепланировку в процессе строительства.</p>
+						</div>
+					</div>
+				</div>
+				<div class="working-item uk-cover-container">
+					<img src="assets/template/img/working-3.jpg" alt="" class="working-item__image" uk-cover>
+					<div class="working-item__container">
+						<div class="working-item__title">Дизайнер планирует пространство</div>
+						<div class="working-item__desc">
+							<p>Это основа дизайн-проекта, на этом этапе студия дизайна интерьера прорисовывает не менее 3-х вариантов планировочных решений каждого помещения и уже из них вы</p>
+							<p>Дизайн-проект вашего дома, выполненный по такой продуманной системе, обеспечит сокращение непредвиденных расходов на возможную перепланировку в процессе строительства.</p>
+						</div>
+					</div>
+				</div>
+				<div class="working-item uk-cover-container">
+					<img src="assets/template/img/working-4.jpg" alt="" class="working-item__image" uk-cover>
+					<div class="working-item__container">
+						<div class="working-item__title">Дизайнер планирует пространство</div>
+						<div class="working-item__desc">
+							<p>Это основа дизайн-проекта, на этом этапе студия дизайна интерьера прорисовывает не менее 3-х вариантов планировочных решений каждого помещения и уже из них вы</p>
+							<p>Дизайн-проект вашего дома, выполненный по такой продуманной системе, обеспечит сокращение непредвиденных расходов на возможную перепланировку в процессе строительства.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="uk-container">
+		<div class="section-title section-title--dark">
+			<span class="section-title__text">
+				Из жизни дизайнера
+			</span>
+		</div>
+
+		<div class="uk-grid uk-grid-collapse">
+			<div class="uk-width-1-2@m">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-1-2">
+						<a href="" class="life-item">
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__title">Отзывы</span>
+						</a>
+						<a href="" class="life-item uk-cover-container">
+							<img src="assets/template/img/life-3.jpg" alt="" class="life-item__image" uk-cover>
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__title">Вакансии</span>
+						</a>
+					</div>
+					<div class="uk-width-1-2">
+						<a href="" class="life-item uk-cover-container">
+							<img src="assets/template/img/life-1.jpg" alt="" class="life-item__image" uk-cover>
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__title life-item__title--wide">Картины&nbsp;в<br> интерьер</span>
+						</a>
+						<a href="" class="life-item uk-cover-container">
+							<img src="assets/template/img/life-4.jpg" alt="" class="life-item__image" uk-cover>
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__square uk-flex uk-flex-middle uk-flex-center">
+								<span>О нас</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-1-2@m">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-1-2">
+						<a href="" class="life-item uk-cover-container">
+							<img src="assets/template/img/life-2.jpg" alt="" class="life-item__image" uk-cover>
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__desc">Дни дизайна в Китае</span>
+						</a>
+						<a href="" class="life-item life-item--light">
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__mc uk-flex uk-flex-column uk-flex-middle uk-flex-center">
+								<span class="life-item__mc__abbr">МК</span>
+								<span class="life-item__mc__text">
+									Мастер-классы
+									<hr>
+									СТАЖИРОВКА
+								</span>
+							</span>
+						</a>
+					</div>
+					<div class="uk-width-1-2">
+						<a href="" class="life-item">
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<img src="assets/template/img/spacer.gif" alt="" class="life-item__spacer">
+							<span class="life-item__blog">
+								<span class="life-item__blog__title">Зачем нужна<br> 3D-визуализация?</span>
+								<span class="life-item__blog__desc">Блог House Room Design</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="home-text uk-container">
+		<h2>Сео-текст заголовок 2</h2>
+		<h3>Что вы получаете, делая заказ в студии дизайна?</h3>
+		<div class="receive-list">
+			<div class="receive-item uk-flex uk-flex-middle">
+				<div class="receive-item__icon"><img src="assets/template/img/cube.svg" width="102" alt=""></div>
+				<div class="receive-item__text">Над вашим проектом будут работать не менее 3х профессиональных дизайнеров и визуализаторов под руководством опытных арт-директоров. </div>
+			</div>
+			<div class="receive-item uk-flex uk-flex-middle">
+				<div class="receive-item__icon"><img src="assets/template/img/graphic-design.svg" width="102" alt=""></div>
+				<div class="receive-item__text">В течении уже 5-6ти рабочих дней, вы получаете готовую визуализацию дизайн проекта, что даст вам возможность оценить дизайн интерьера до начала отделочных работ. </div>
+			</div>
+			<div class="receive-item uk-flex uk-flex-middle">
+				<div class="receive-item__icon"><img src="assets/template/img/portfolio.svg" width="102" alt=""></div>
+				<div class="receive-item__text">Средствами авторского надзора мы проконтролируем весь ход реализации проекта и поможем в подборе и закупке материалов.</div>
+			</div>
+		</div>
+		<h3>Что мы учитываем в дизайне интерьера?</h3>
+		<ol class="list-numbers">
+			<li>Правильное зонирование помещений и пространства в целом.</li>
+			<li>Проводим грамотную работу с освещением.</li>
+			<li>Учитываем влияние цвета и предлагаем цветовые решения.</li>
+			<li>Продумываем различные системы хранения для кухонь и жилых комнат.</li>
+			<li>Используем правильные материалы, с учетом их свойств.</li>
+			<li>Реализовываем любые стили и техники, максимально подходящие вами вашей семье.</li>
+			<li>Работаем в заданной ценовой политике.</li>
+		</ol>
+	</section>
+
+	<footer class="uk-container">
+		<section class="footer-first">
+			<div class="uk-grid" uk-grid>
+				<div class="uk-width-2-5">
+					<a href="/"><img src="assets/template/img/logo-footer.png" alt="" class="footer__logo"></a>
+					<ul class="footer__rights">
+						<li><a href="#">Пользовательское соглашение</a></li>
+						<li><a href="#">Политика обработки персональных данных</a></li>
+					</ul>
+				</div>
+
+				<div class="uk-width-3-5">
+					<div class="uk-grid" uk-grid>
+						<div class="uk-width-expand">
+							<div class="footer__title">Наш офис</div>
+							<table class="footer__contacts">
+								<tr>
+									<td>Севастополь:</td>
+									<td>
+										+7 (978) 070-43-33<br> +7 (978) 042-24-43
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><br></td>
+								</tr>
+								<tr>
+									<td>Москва:</td>
+									<td>+7 (985) 875-29-17</td>
+								</tr>
+								<tr>
+									<td colspan="2"><br></td>
+								</tr>
+								<tr>
+									<td>E-mail:</td>
+									<td><a href="mailto:info@gerabyte.ru">info@gerabyte.ru</a></td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="uk-width-1-4">
+							<div class="footer__title">Время работы</div>
+							<table class="footer__contacts">
+								<tr>
+									<td>Пн-пт:</td>
+									<td>
+										с 10:00 до 19:00
+									</td>
+								</tr>
+								<tr>
+									<td>Сб-вс:</td>
+									<td>Выходные</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="uk-width-1-4">
+							<div class="footer__title">Портфолио</div>
+							<ul class="footer__menu">
+								<li><a href="#">Кафе, рестораны и т.д.</a></li>
+								<li><a href="#">Современные</a></li>
+								<li><a href="#">Прованс</a></li>
+								<li><a href="#">Классические</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="footer-second">
+			<div class="uk-grid uk-flex-middle" uk-grid>
+				<div class="uk-width-2-5">
+					<div class="footer__copyright">©2017, Студия дизайна GERABYTE: дизайн-проекты квартир, загородных домов, офисов, коммерческой недвижимости, общественных заведений, магазинов, ресторанов и кафе</div>
+					<div></div>
+				</div>
+
+				<div class="uk-width-3-5">
+					<div class="footer__right uk-flex uk-flex-between uk-flex-middle">
+						<div class="uk-flex uk-flex-between uk-flex-middle">
+							<a href="#" class="footer__sitemap">Карта сайта</a>
+							<div class="footer__counters">
+								[^t^]
+							</div>
+						</div>
+						<a href="http://domenart-studio.ru" class="footer__creator" target="_blank">Разработка сайта</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
 {/block}

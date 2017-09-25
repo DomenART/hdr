@@ -139,17 +139,19 @@
 	font-size: 14px;
 	line-height: 1.9;
 	position: relative;
+    display: inline-block;
 	&:hover {
 		color: #fefefe;
 		text-decoration: none;
 	}
 	&::before {
-		content: '';
-		width: 40px;
-		height: 1px;
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		tramsform: translateX(-50%);
+	    content: '';
+	    width: 40px;
+	    height: 1px;
+	    position: absolute;
+	    bottom: 0px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    background: #fff;
 	}
 }

@@ -5,12 +5,12 @@
 // UIkit.use(Icons)
 
 
-var slideshow = document.getElementById('slideshow');
-var slideBar = document.getElementById('slide-bar');
+var slideshow = document.getElementById('slideshow'),
+	slideBar = document.getElementById('slide-bar');
 
-if (slideshow && slideBar) {
+if(slideshow && slideBar) {
 	window.addEventListener('scroll', function(e) {
-		if (window.scrollY > slideshow.offsetHeight - window.innerHeight) {
+		if(window.scrollY > slideshow.offsetHeight - window.innerHeight) {
 			slideBar.classList.add('slide-bar--sticky');
 		} else {
 			slideBar.classList.remove('slide-bar--sticky');
@@ -18,23 +18,22 @@ if (slideshow && slideBar) {
 	});
 }
 
-// Вывод фданных по проекту шаблона "Проект"
 
-var projectItem = document.querySelectorAll('.js-project-item'),
-	projectLeftCol = document.getElementById('project-pool-left'),
-	projectRightCol = document.getElementById('project-pool-right'),
-	project_left_height = 0,
-	project_right_height = 0;
+if(window.innerWidth > 960) {
+	var slideBarSocial = document.querySelector('.slide-bar__social'),
+		toolBarSocial = document.querySelector('.toolbar__social');
 
-if (projectItem) {
-	for (var i = 1; i < projectItem.length; i++) {
-		if (project_left_height < project_right_height) {
-			project_left_height += projectItem[i].offsetHeight;
-		}
-		else {
-			projectLeftCol.removeChild(projectItem[i]);
-			projectRightCol.appendChild(projectItem[i]);
-			project_right_height += projectItem[i].offsetHeight;
-		};
+	if(slideBarSocial) {
+		var slideBarSocialTop = slideBarSocial.getBoundingClientRect().top;
+
+		window.addEventListener('scroll', function(e) {
+			if(window.scrollY > slideBarSocialTop) {
+				toolBarSocial.classList.add('toolbar__social--visible');
+			} else {
+				toolBarSocial.classList.remove('toolbar__social--visible');
+			}
+		});
+	} else {
+		toolBarSocial.classList.add('toolbar__social--visible');
 	}
 }
