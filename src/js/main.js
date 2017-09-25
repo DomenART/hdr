@@ -1,21 +1,31 @@
-//= ../../node_modules/jquery/dist/jquery.min.js
-//= ../../node_modules/uikit/dist/js/uikit.min.js
-//= ../../node_modules/uikit/dist/js/uikit-icons.min.js
+/* import files */
+require.context('../img', true)
+require.context('../fonts', true)
 
-// UIkit.use(Icons)
+
+/* import styles */
+import '../less/main.less'
+
+
+/* import scripts */
+import jQuery from 'jquery'
+import UIkit from 'uikit'
+import Icons from 'uikit/dist/js/uikit-icons'
+
+// loads the Icon plugin
+UIkit.use(Icons)
 
 
 var slideshow = document.getElementById('slideshow'),
 	slideBar = document.getElementById('slide-bar');
 
 if(slideshow && slideBar) {
-	window.addEventListener('scroll', function(e) {
-		if(window.scrollY > slideshow.offsetHeight - window.innerHeight) {
-			slideBar.classList.add('slide-bar--sticky');
-		} else {
-			slideBar.classList.remove('slide-bar--sticky');
-		}
-	});
+	window.addEventListener('scroll', (e) => {
+		if(window.scrollY > slideshow.offsetHeight - window.innerHeight)
+			slideBar.classList.add('slide-bar--sticky')
+		else
+			slideBar.classList.remove('slide-bar--sticky')
+	})
 }
 
 
@@ -26,14 +36,40 @@ if(window.innerWidth > 960) {
 	if(slideBarSocial) {
 		var slideBarSocialTop = slideBarSocial.getBoundingClientRect().top;
 
-		window.addEventListener('scroll', function(e) {
-			if(window.scrollY > slideBarSocialTop) {
-				toolBarSocial.classList.add('toolbar__social--visible');
-			} else {
-				toolBarSocial.classList.remove('toolbar__social--visible');
-			}
+		window.addEventListener('scroll', (e) => {
+			if(window.scrollY > slideBarSocialTop)
+				toolBarSocial.classList.add('toolbar__social--visible')
+			else
+				toolBarSocial.classList.remove('toolbar__social--visible')
 		});
 	} else {
 		toolBarSocial.classList.add('toolbar__social--visible');
 	}
 }
+
+var portfolioItems = document.querySelectorAll('.home-portfolio-item');
+for(var i = 0; i < portfolioItems.length; i++) {
+	let item = portfolioItems[i];
+	let image = item.querySelector('.home-portfolio-item__image');
+
+	item.onmousemove = function(e) {
+		var offset = item.getBoundingClientRect(),
+			x = (e.clientX-offset.left)/item.offsetWidth*100,
+			y = (e.clientY-offset.top)/item.offsetHeight*100;
+		image.style.transformOrigin = x + '% ' + y + '%';
+	}
+}
+
+/*import Vue from 'vue/dist/vue.js'
+// var Vue = require('vue')
+// var comprasion = require('./components/comprasion.vue')
+Vue.component('comprasion', require('./components/comprasion.vue'))
+var app = new Vue({ 
+	el: '#app'
+})*/
+
+// import Vue from 'vue/dist/vue.js'
+// Vue.component('comprasion', require('./components/comprasion.vue'))
+// var app = new Vue({ 
+// 	el: '#app'
+// })

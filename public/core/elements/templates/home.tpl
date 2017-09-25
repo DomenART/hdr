@@ -112,6 +112,8 @@
 		</div>
 	</section>
 
+	<comprasion></comprasion>
+
 	<section class="section-directions">
 		<div class="uk-container">
 			<div class="dierctions uk-grid uk-grid-collapse">
@@ -172,6 +174,7 @@
 					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
 						<img src="assets/template/img/project-1.jpg" alt="" class="home-portfolio-item__image" uk-cover>
 						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__line"></span>
 						<span class="home-portfolio-item__desc">Название проекта</span>
 					</a>
 				</div>
@@ -179,6 +182,7 @@
 					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
 						<img src="assets/template/img/project-2.jpg" alt="" class="home-portfolio-item__image" uk-cover>
 						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__line"></span>
 						<span class="home-portfolio-item__desc">Название проекта</span>
 					</a>
 				</div>
@@ -186,6 +190,7 @@
 					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
 						<img src="assets/template/img/project-3.jpg" alt="" class="home-portfolio-item__image" uk-cover>
 						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__line"></span>
 						<span class="home-portfolio-item__desc">Название проекта</span>
 					</a>
 				</div>
@@ -193,6 +198,7 @@
 					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
 						<img src="assets/template/img/project-4.jpg" alt="" class="home-portfolio-item__image" uk-cover>
 						<span class="home-portfolio-item__title">Категория проекта</span>
+						<span class="home-portfolio-item__line"></span>
 						<span class="home-portfolio-item__desc">Название проекта</span>
 					</a>
 				</div>
