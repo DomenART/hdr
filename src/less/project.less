@@ -1,6 +1,12 @@
 .pagetitle--project {
-	margin-top: 100px;
+
+	max-width: 964px;
+	padding-top: 100px;
+	margin: 0 auto;
 	text-transform: uppercase;
+	@media (max-width: @breakpoint-xsmall-max) {
+		padding-bottom: 100px;
+	}
 }
 
 .project-header {
@@ -10,10 +16,17 @@
 	width: 100%;
 	height: 761px;
 	background-size: cover;
+	@media (max-width: @breakpoint-xsmall-max) {
+		height: auto;
+	}
 }
 
 .project-bar {
     .control-bar(absolute);
+    @media (max-width: @breakpoint-xsmall-max) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 .project-bar__prev,
@@ -26,7 +39,99 @@
 	}
 }
 
-.project-bar__prev {
+
+.project-bar__control {
+	margin-right: 140px;
+}
+
+.project-bar__links {
+	display: block;
+	margin-top: 15px;
+	padding-top: 20px;
 	position: relative;
-	
+	color: #999999;
+	font-size: 12px;
+	&:hover {
+		color: darken(#999999, 30%);
+		text-decoration: none;
+	}
+	&::before {
+		content: '';
+		width: 33px;
+		height: 1px;
+		background-color: #666666;
+		position: absolute;
+		bottom: 13px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&::after {
+		content: '';
+		width: 6px;
+		height: 6px;
+		border-right: 2px solid #666666;
+		border-bottom: 2px solid #666666;
+		position: absolute;
+		top: 50%;	
+		left: 30px;
+	}
+	&:first-of-type {
+		margin-right: 30px;
+		&::after {
+			transform: rotate(135deg) translateY(-50%);
+		}
+	}	
+	&:last-of-type {
+		&::after {
+			transform: rotate(-45deg) translateY(-50%);
+		}
+	}
+}
+
+
+.project-bar__year {
+	margin-right: 31px;
+	font-size: 24px;
+	line-height: 1.5;
+	letter-spacing: 2px;
+}
+
+.project-bar__desc {
+	font-size: 14px;
+	line-height: 1.2;
+}
+
+.project__category {
+	margin-top: 69px;
+	margin-bottom: 52px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.project__text {
+	padding-bottom: 90px;
+	max-width: 964px;
+	margin: 0 auto;
+	text-align: center;
+	h2 {
+		margin-bottom: 46px;
+		text-align: center;
+		color: #000000;
+		font-family: @font-alt;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+}
+
+.project-item__text {
+	padding: 97px 97px 113px 97px;
+	font-size: 24px;
+	line-height: 1.125;
+	@media (max-width: @breakpoint-small-max) {
+		padding: 50px;
+		font-size: 18px;
+	}
 }
