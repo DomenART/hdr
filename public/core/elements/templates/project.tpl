@@ -1,6 +1,5 @@
 {extends 'file:templates/base.tpl'}
 {block 'content'}
-
 	<header class="project-header" style="background: url('{$_modx->resource['project.header-image']}') no-repeat 50% 50%; background-size: cover">
 		<div class="uk-container">
 			<div class="breadcrumb breadcrumb--white uk-flex uk-flex-center">
@@ -10,18 +9,16 @@
 			    ]}
 			</div>
 			<h1 class="pagetitle pagetitle--white pagetitle--project">{$_modx->resource.longtitle ?: $_modx->resource.pagetitle}</h1>
-			<div class="project-bar uk-flex">
+			<div class="project-bar uk-flex uk-flex-wrap uk-flex-middle">
 				<div class="project-bar__control uk-flex uk-flex-middle">
-					<a href="#">
-						<span class="project-bar__arrow-prev"></span>
-						<span class="project-bar__prev">предыдущий</span>
+					<a href="#" class="project-bar__links">
+						<span></span>предыдущий
 					</a>
-					<a href="#">
-						<span  class="project-bar__arrow-next"></span>
-						<span class="project-bar__next">следующий</span>
+					<a href="#" class="project-bar__links">
+						следующий
 					</a>
 				</div>
-				<div class="project-bar__info uk-flex">
+				<div class="project-bar__info uk-flex uk-flex-wrap">
 					<div class="project-bar__year">
 						2017
 					</div>
@@ -41,7 +38,7 @@
 			</div>
 		</div>
 		<div class="project-pool">
-			<div class="uk-grid uk-grid-collapse uk-child-width-1-2 uk-flex uk-flex-bottom">
+			<div class="uk-grid uk-grid-collapse uk-child-width-1-2@s uk-flex uk-flex-bottom">
 				<div id="project-pool-left">
 					{foreach $_modx->resource['project.item'] | json_decode as $row}
 					<div class="js-project-item">

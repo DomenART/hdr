@@ -1,8 +1,11 @@
 .pagetitle--project {
-	width: 964px;
-	margin: 100px auto 0;
-	text-align: center;
+	max-width: 964px;
+	padding-top: 100px;
+	margin: 0 auto;
 	text-transform: uppercase;
+	@media (max-width: @breakpoint-xsmall-max) {
+		padding-bottom: 100px;
+	}
 }
 
 .project-header {
@@ -12,10 +15,17 @@
 	width: 100%;
 	height: 761px;
 	background-size: cover;
+	@media (max-width: @breakpoint-xsmall-max) {
+		height: auto;
+	}
 }
 
 .project-bar {
     .control-bar(absolute);
+    @media (max-width: @breakpoint-xsmall-max) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 .project-bar__prev,
@@ -29,27 +39,29 @@
 }
 
 .project-bar__control {
-	margin-right: 138px;
-	a {
-		display: block;
-		&:first-of-type {
-			margin-right: 30px;
-		}
-	}
+	margin-right: 140px;
 }
 
-.control-bar__arrows(@rotate-value) {
+.project-bar__links {
 	display: block;
+	margin-top: 15px;
+	padding-top: 20px;
 	position: relative;
+	color: #999999;
+	font-size: 12px;
+	&:hover {
+		color: darken(#999999, 30%);
+		text-decoration: none;
+	}
 	&::before {
-		conent: '';
+		content: '';
 		width: 33px;
 		height: 1px;
 		background-color: #666666;
 		position: absolute;
 		bottom: 13px;
 		left: 50%;
-		transform: rotate(@rotate-value) translateX(-50%);
+		transform: translateX(-50%);
 	}
 	&::after {
 		content: '';
@@ -58,28 +70,33 @@
 		border-right: 2px solid #666666;
 		border-bottom: 2px solid #666666;
 		position: absolute;
-		bottom: 13px;	
+		top: 50%;	
 		left: 30px;
-		transform: rotate(@rotate-value) translateY(-50%);
+	}
+	&:first-of-type {
+		margin-right: 30px;
+		&::after {
+			transform: rotate(135deg) translateY(-50%);
+		}
+	}	
+	&:last-of-type {
+		&::after {
+			transform: rotate(-45deg) translateY(-50%);
+		}
 	}
 }
 
-.project-bar__arrow-prev {
-	.control-bar__arrows(135deg)
-}
-
-.project-bar__arrow-next {
-	.control-bar__arrows(-45deg)
-}
 
 .project-bar__year {
 	margin-right: 31px;
 	font-size: 24px;
 	line-height: 1.5;
+	letter-spacing: 2px;
 }
 
 .project-bar__desc {
 	font-size: 14px;
+	line-height: 1.2;
 }
 
 .project__category {
@@ -92,7 +109,7 @@
 
 .project__text {
 	padding-bottom: 90px;
-	width: 964px;
+	max-width: 964px;
 	margin: 0 auto;
 	text-align: center;
 	h2 {
@@ -111,4 +128,8 @@
 	padding: 97px 97px 113px 97px;
 	font-size: 24px;
 	line-height: 1.125;
+	@media (max-width: @breakpoint-small-max) {
+		padding: 50px;
+		font-size: 18px;
+	}
 }
