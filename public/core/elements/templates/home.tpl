@@ -165,7 +165,7 @@
 			<div class="section-title">
 				<span class="section-title__text">
 					Портфолио
-					<a href="#" class="section-title__all">смотреть все</a>
+					<a href="#" class="view-all">смотреть все</a>
 				</span>
 			</div>
 
