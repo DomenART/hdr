@@ -165,41 +165,41 @@
 			<div class="section-title">
 				<span class="section-title__text">
 					Портфолио
-					<a href="#" class="section-title__all">смотреть все</a>
+					<a href="#" class="view-all">смотреть все</a>
 				</span>
 			</div>
 
 			<div class="uk-grid uk-grid-collapse uk-child-width-1-2">
 				<div>
-					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
-						<img src="assets/template/img/project-1.jpg" alt="" class="home-portfolio-item__image" uk-cover>
-						<span class="home-portfolio-item__title">Категория проекта</span>
-						<span class="home-portfolio-item__line"></span>
-						<span class="home-portfolio-item__desc">Название проекта</span>
+					<a href="#" class="portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-1.jpg" alt="" class="portfolio-item__image" uk-cover>
+						<span class="portfolio-item__title">Название проекта</span>
+						<span class="portfolio-item__line"></span>
+						<span class="portfolio-item__desc">Категория проекта</span>
 					</a>
 				</div>
 				<div>
-					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
-						<img src="assets/template/img/project-2.jpg" alt="" class="home-portfolio-item__image" uk-cover>
-						<span class="home-portfolio-item__title">Категория проекта</span>
-						<span class="home-portfolio-item__line"></span>
-						<span class="home-portfolio-item__desc">Название проекта</span>
+					<a href="#" class="portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-2.jpg" alt="" class="portfolio-item__image" uk-cover>
+						<span class="portfolio-item__title">Название проекта</span>
+						<span class="portfolio-item__line"></span>
+						<span class="portfolio-item__desc">Категория проекта</span>
 					</a>
 				</div>
 				<div>
-					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
-						<img src="assets/template/img/project-3.jpg" alt="" class="home-portfolio-item__image" uk-cover>
-						<span class="home-portfolio-item__title">Категория проекта</span>
-						<span class="home-portfolio-item__line"></span>
-						<span class="home-portfolio-item__desc">Название проекта</span>
+					<a href="#" class="portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-3.jpg" alt="" class="portfolio-item__image" uk-cover>
+						<span class="portfolio-item__title">Название проекта</span>
+						<span class="portfolio-item__line"></span>
+						<span class="portfolio-item__desc">Категория проекта</span>
 					</a>
 				</div>
 				<div>
-					<a href="#" class="home-portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
-						<img src="assets/template/img/project-4.jpg" alt="" class="home-portfolio-item__image" uk-cover>
-						<span class="home-portfolio-item__title">Категория проекта</span>
-						<span class="home-portfolio-item__line"></span>
-						<span class="home-portfolio-item__desc">Название проекта</span>
+					<a href="#" class="portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+						<img src="assets/template/img/project-4.jpg" alt="" class="portfolio-item__image" uk-cover>
+						<span class="portfolio-item__title">Название проекта</span>
+						<span class="portfolio-item__line"></span>
+						<span class="portfolio-item__desc">Категория проекта</span>
 					</a>
 				</div>
 			</div>
@@ -209,7 +209,7 @@
 	<section class="section-working">
 		<div class="uk-container">
 			<div class="section-title section-title--dark">
-				<span class="section-title__text">
+				<span class="view-all">
 					Как мы работаем
 				</span>
 			</div>
