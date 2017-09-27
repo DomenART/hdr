@@ -111,7 +111,7 @@
 	module.exports = {
 		data: function() {
 			return {
-				greeting: 'Привет'
+				greeting: 'Привет2'
 			}
 		},
 
