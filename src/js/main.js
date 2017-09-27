@@ -2,10 +2,8 @@
 require.context('../img', true)
 require.context('../fonts', true)
 
-
 /* import styles */
 import '../less/main.less'
-
 
 /* import scripts */
 import jQuery from 'jquery'
@@ -88,7 +86,7 @@ if (projectItem) {
 import Vue from 'vue'
 import comprasion from './components/comprasion.vue'
 
-var app = new Vue({ 
+var app = new Vue({
 	el: '#app',
 	components: {
 		comprasion
