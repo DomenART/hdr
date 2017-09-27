@@ -100,7 +100,8 @@ var app = new Vue({
 // })
 
 import Vue from 'vue'
-Vue.component('comprasion', require('./components/comprasion.vue'))
+import comprasion from './components/comprasion.vue'
+
 var app = new Vue({ 
 	el: '#app'
 })

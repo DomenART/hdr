@@ -13,13 +13,13 @@ module.exports = {
 		filename: '[name].js'
 	},
 	module: {
-		rules: [{
+		rules: [/*{
 			test: /\.js$/,
 			loader: 'babel-loader',
 			query: {
 				presets: ['es2015']
 			}
-		}, {
+		}, */{
 			test: /\.vue$/,
 			loader: 'vue-loader'
 		}, {
@@ -32,6 +32,13 @@ module.exports = {
 					loader: "less-loader"
 				}]
 			})
+		}, {
+			test: /\.js$/,
+			loader: 'babel-loader',
+			exclude: /node_modules/,
+			query: {
+				presets: ['es2015']
+			}
 		}, {
 			test: /\.(png|jpg|gif|svg)$/,
 			use: [{
