@@ -1,2 +1,6 @@
+public/
+!public/core/elements
 node_modules/
 sources/
+*.sublime-project
+*.sublime-workspace
