@@ -5,84 +5,11 @@ require.context('../fonts', true)
 /* import styles */
 import '../less/main.less'
 
-/* import scripts */
-import jQuery from 'jquery'
-import UIkit from 'uikit'
-import Icons from 'uikit/dist/js/uikit-icons'
+/*--------------------------------------------------*/
 
-// loads the Icon plugin
-UIkit.use(Icons)
-
-
-var slideshow = document.getElementById('slideshow'),
-	slideBar = document.getElementById('slide-bar');
-
-if(slideshow && slideBar) {
-	window.addEventListener('scroll', (e) => {
-		if(window.scrollY > slideshow.offsetHeight - window.innerHeight)
-			slideBar.classList.add('slide-bar--sticky')
-		else
-			slideBar.classList.remove('slide-bar--sticky')
-	})
-}
-
-
-if(window.innerWidth > 960) {
-	var slideBarSocial = document.querySelector('.slide-bar__social'),
-		toolBarSocial = document.querySelector('.toolbar__social');
-
-	if(slideBarSocial) {
-		var slideBarSocialTop = slideBarSocial.getBoundingClientRect().top;
-
-		window.addEventListener('scroll', (e) => {
-			if(window.scrollY > slideBarSocialTop)
-				toolBarSocial.classList.add('toolbar__social--visible')
-			else
-				toolBarSocial.classList.remove('toolbar__social--visible')
-		});
-	} else if(toolBarSocial) {
-		toolBarSocial.classList.add('toolbar__social--visible');
-	}
-}
-
-
-// Анимация на элементе портфолио
-
-var portfolioItems = document.querySelectorAll('.portfolio-item');
-for(var i = 0; i < portfolioItems.length; i++) {
-	let item = portfolioItems[i];
-	let image = item.querySelector('.portfolio-item__image');
-
-	item.onmousemove = function(e) {
-		var offset = item.getBoundingClientRect(),
-			x = (e.clientX-offset.left)/item.offsetWidth*100,
-			y = (e.clientY-offset.top)/item.offsetHeight*100;
-		image.style.transformOrigin = x + '% ' + y + '%';
-	}
-}
-
-
-// Вывод фданных по проекту шаблона "Проект"
-
-var projectItem = document.querySelectorAll('.js-project-item'),
-	projectLeftCol = document.getElementById('project-pool-left'),
-	projectRightCol = document.getElementById('project-pool-right'),
-	project_left_height = 0,
-	project_right_height = 0;
-
-if (projectItem) {
-	for (var i = 1; i < projectItem.length; i++) {
-		if (project_left_height < project_right_height) {
-			project_left_height += projectItem[i].offsetHeight;
-		}
-		else {
-			projectLeftCol.removeChild(projectItem[i]);
-			projectRightCol.appendChild(projectItem[i]);
-			project_right_height += projectItem[i].offsetHeight;
-		};
-	}
-}
-
+/**
+ * Include Vue
+ */
 import Vue from 'vue'
 import comprasion from './components/comprasion.vue'
 
@@ -92,3 +19,93 @@ var app = new Vue({
 		comprasion
 	}
 })
+
+/**
+ * Include jQuery
+ */
+import jQuery from 'jquery'
+
+/**
+ * Include UIkit
+ */
+import UIkit from 'uikit'
+import Icons from 'uikit/dist/js/uikit-icons'
+UIkit.use(Icons)
+
+/**
+ * sticky slide bar
+ */
+var slideBar = document.getElementById('slide-bar')
+if(slideBar) {
+	let slideshow = document.getElementById('slideshow')
+
+	window.addEventListener('scroll', (e) => {
+		if(window.scrollY > slideshow.offsetHeight - window.innerHeight)
+			slideBar.classList.add('slide-bar--sticky')
+		else
+			slideBar.classList.remove('slide-bar--sticky')
+	})
+}
+
+/**
+ * sticky social links
+ */
+if(window.innerWidth > 960) {
+	let slideBarSocial = document.querySelector('.slide-bar__social')
+	let toolBarSocial = document.querySelector('.toolbar__social')
+
+	if(slideBarSocial) {
+		let slideBarSocialTop = slideBarSocial.getBoundingClientRect().top
+
+		window.addEventListener('scroll', (e) => {
+			if(window.scrollY > slideBarSocialTop)
+				toolBarSocial.classList.add('toolbar__social--visible')
+			else
+				toolBarSocial.classList.remove('toolbar__social--visible')
+		})
+	} else if(toolBarSocial) {
+		toolBarSocial.classList.add('toolbar__social--visible')
+	}
+}
+
+/**
+ * Kern Burns effect on portfolio item
+ */
+var portfolioItems = document.querySelectorAll('.portfolio-item')
+if(portfolioItems.length) {
+	for(let i = 0; i < portfolioItems.length; i++) {
+		let item = portfolioItems[i]
+		let image = item.querySelector('.portfolio-item__image')
+
+		item.onmousemove = function(e) {
+			let offset = item.getBoundingClientRect()
+			let x = (e.clientX-offset.left)/item.offsetWidth*100
+			let y = (e.clientY-offset.top)/item.offsetHeight*100
+
+			image.style.transformOrigin = x + '% ' + y + '%'
+		}
+	}
+}
+
+/**
+ * Split projects into two columns
+ */
+var projectItems = document.querySelectorAll('.js-project-item')
+if (projectItems.length) {
+	let leftCol = document.getElementById('project-pool-left')
+	let rightCol = document.getElementById('project-pool-right')
+	let leftHeight = 0
+	let rightHeight = 0
+
+	for (let i = 1; i < projectItems.length; i++) {
+		let item = projectItems[i]
+
+		if (leftHeight < rightHeight) {
+			leftHeight += item.offsetHeight
+		} else {
+			leftCol.removeChild(item)
+			rightCol.appendChild(item)
+			rightHeight += item.offsetHeight
+		}
+	}
+}
