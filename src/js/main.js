@@ -98,3 +98,9 @@ var app = new Vue({
 // var app = new Vue({ 
 // 	el: '#app'
 // })
+
+import Vue from 'vue'
+Vue.component('comprasion', require('./components/comprasion.vue'))
+var app = new Vue({ 
+	el: '#app'
+})
