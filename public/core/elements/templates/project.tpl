@@ -1,6 +1,6 @@
 {extends 'file:templates/base.tpl'}
 {block 'content'}
-	<header class="project-header" style="background: url('{$_modx->resource['project.header-image']}') no-repeat 50% 50%; background-size: cover">
+	<header class="project-header" style="background: url('{$_modx->resource['project_image']}') no-repeat 50% 50%; background-size: cover">
 		<div class="uk-container">
 			<div class="breadcrumb breadcrumb--white uk-flex uk-flex-center">
 			    {'pdoCrumbs' | snippet : [
@@ -15,7 +15,7 @@
 						<span></span>предыдущий
 					</a>
 					<a href="#" class="project-bar__links">
-						следующий
+						<span></span>следующий
 					</a>
 				</div>
 				<div class="project-bar__info uk-flex uk-flex-wrap">
@@ -23,8 +23,7 @@
 						2017
 					</div>
 					<div class="project-bar__desc">
-						Студия дизайна House Room Design<br>
-						Описание поставленной задачи - краткое
+						{$_modx->resource.introtext}
 					</div>
 				</div>
 			</div>
@@ -32,7 +31,7 @@
 	</header>
 	<main>
 		<div class="uk-container">
-			<div class="project__category">Категория проекта или стиль</div>
+			<div class="project__category">{$_modx->resource.description}</div>
 			<div class="project__text">
 				{$_modx->resource.content}
 			</div>
@@ -41,10 +40,20 @@
 			<div class="uk-grid uk-grid-collapse uk-child-width-1-2@s uk-flex uk-flex-bottom">
 				<div id="project-pool-left">
 					{foreach $_modx->resource['project.item'] | json_decode as $row}
-					<div class="js-project-item">
+					<div class="project-item js-project-item">
 						<img src="{$row.image}" alt="">
 						{if $row['text']}
 							<div class="project-item__text">{$row.text | nl2br}</div>
+						{/if}
+						{if $row['consult']} 
+							<div class="consult">
+								<div class="consult__text">
+									Бесплатная консультация<br>
+									от дизайнера<br>
+									House Room Design
+								</div>
+								<button class="uk-button button-intro button-intro--consult">Заказать<span class="button-intro__arrow"></span></button>
+							</div>
 						{/if}
 					</div>
 					{/foreach}

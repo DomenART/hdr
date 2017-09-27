@@ -14,12 +14,6 @@ module.exports = {
 	},
 	module: {
 		rules: [{
-			test: /\.js$/,
-			loader: 'babel-loader',
-			query: {
-				presets: ['es2015']
-			}
-		}, {
 			test: /\.vue$/,
 			loader: 'vue-loader'
 		}, {

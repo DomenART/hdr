@@ -27,17 +27,24 @@
 </div>
 <div class="portfolio-pool">
 	<div class="uk-container">
-		<div class="uk-grid uk-grid-collapse uk-child-width-1-2@m">
-			<div>
-				<a href="#" class="portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
-					<img src="assets/template/img/project-1.jpg" alt="" class="portfolio-item__image" uk-cover>
-					<span class="portfolio-item__title">Название проекта</span>
-					<span class="portfolio-item__line"></span>
-					<span class="portfolio-item__desc">Категория проекта</span>
-				</a>
-			</div>
-			
+	<div id="pdopage">
+		<div class="rows uk-grid uk-grid-collapse uk-child-width-1-2@m">
+
+		{'!pdoPage' | snippet : [
+			'element' => 'pdoResources',
+			'depth' => 2,
+			'limit' => 4,
+		  	'includeTVs' => 'project_image',
+            'tvPrefix' => '',
+			'tpl' => '@FILE chunks/portfolio-item.tpl',
+			'ajaxMode' => 'button',
+			'ajaxTplMore' => '@INLINE <button class="btn btn-default btn-more">Показать ещё</button>',
+			'where' => ['class_key' => 'ticket']
+		]}
+
 		</div>
+		{$_modx->getPlaceholder('page.nav')}
+	</div>
 		<div class="portfolio-pool__control uk-flex uk-flex-around uk-flex-center@s uk-flex-middle uk-flex-wrap">
 				<button type="button" class="uk-button button-intro button-intro--portfolio">Показать еще<span class="button-intro__arrow"></span></button>
 				<a href="#" class="view-all view-all--portfolio">показать все</a>
