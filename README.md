@@ -1,6 +1,4 @@
-# hdr
-
-> House Design Room
+# House Design Room
 
 ## Build Setup
 
