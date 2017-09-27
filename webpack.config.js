@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -6,6 +7,24 @@ const PATHS = {
 	build: path.join(__dirname, 'public/assets/template/')
 }
 
+// Enviroment flag
+var env = process.env.WEBPACK_ENV;
+var plugins = [];
+
+// Differ settings based on production flag
+if (env === 'production') {
+  var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+
+  plugins.push(new UglifyJsPlugin({ minimize: true }));
+  plugins.push(new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }
+  ));
+}
+
+// Main Settings config
 module.exports = {
 	entry: PATHS.source + 'js/main.js',
 	output: {
@@ -14,12 +33,6 @@ module.exports = {
 	},
 	module: {
 		rules: [{
-			test: /\.js$/,
-			loader: 'babel-loader',
-			query: {
-				presets: ['es2015']
-			}
-		}, {
 			test: /\.vue$/,
 			loader: 'vue-loader'
 		}, {
@@ -32,6 +45,13 @@ module.exports = {
 					loader: "less-loader"
 				}]
 			})
+		}, {
+			test: /\.js$/,
+			loader: 'babel-loader',
+			exclude: /node_modules/,
+			query: {
+				presets: ['es2015']
+			}
 		}, {
 			test: /\.(png|jpg|gif|svg)$/,
 			use: [{
@@ -53,9 +73,14 @@ module.exports = {
 		}]
 	},
 
-	watch: true,
+	resolve: {
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
+	},
 
-	plugins: [
+	plugins: (plugins || []).concat([
 		new ExtractTextPlugin('[name].css')
-	]
+	])
+		
 };
