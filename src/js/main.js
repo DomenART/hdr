@@ -42,15 +42,18 @@ if(window.innerWidth > 960) {
 			else
 				toolBarSocial.classList.remove('toolbar__social--visible')
 		});
-	} else {
+	} else if(toolBarSocial) {
 		toolBarSocial.classList.add('toolbar__social--visible');
 	}
 }
 
-var portfolioItems = document.querySelectorAll('.home-portfolio-item');
+
+// Анимация на элементе портфолио
+
+var portfolioItems = document.querySelectorAll('.portfolio-item');
 for(var i = 0; i < portfolioItems.length; i++) {
 	let item = portfolioItems[i];
-	let image = item.querySelector('.home-portfolio-item__image');
+	let image = item.querySelector('.portfolio-item__image');
 
 	item.onmousemove = function(e) {
 		var offset = item.getBoundingClientRect(),
@@ -59,6 +62,7 @@ for(var i = 0; i < portfolioItems.length; i++) {
 		image.style.transformOrigin = x + '% ' + y + '%';
 	}
 }
+
 
 // Вывод фданных по проекту шаблона "Проект"
 

@@ -86,11 +86,9 @@
 				<span uk-switcher-item="previous"><i uk-icon="icon: chevron-left"></i></span>
 				<span uk-switcher-item="next"><i uk-icon="icon: chevron-right"></i></span>
 			</div>
-
 			<div class="slide-bar__count">
 				<span class="uk-switcher js-slideshow"><b>1</b><b>2</b><b>3</b></span> из 3
 			</div>
-
 			<div class="slide-bar__social">
 				<div class="social-links">
 					<a href="#" class="social-links__item social-links__item--twitter"></a>
@@ -99,11 +97,9 @@
 					<a href="#" class="social-links__item social-links__item--youtube"></a>
 				</div>
 			</div>
-
 			<a href="#second" class="slide-bar__arrow" uk-scroll><i uk-icon="icon: arrow-down; ratio: 1.2"></i></a>
 		</div>
 	</div>
-
 	<section class="section-about" id="second">
 		<div class="uk-container">
 			<div class="section-about__desc">{$_modx->resource.description}</div>
@@ -111,9 +107,7 @@
 			<div class="section-about__content">{$_modx->resource.content}</div>
 		</div>
 	</section>
-
 	<comprasion></comprasion>
-
 	<section class="section-directions">
 		<div class="uk-container">
 			<div class="dierctions uk-grid uk-grid-collapse">
@@ -122,13 +116,10 @@
 						<span class="dierction-styles__title">Исторические стили интерьера</span>
 					</a>					
 				</div>
-
 				<div class="uk-width-1-2">
-					<div class="dierction-consult">
-						
+					<div class="dierction-consult">		
 					</div>
 				</div>
-
 				<div class="uk-width-1-2">
 					<div class="dierction-design uk-flex uk-flex-middle">
 						<div class="dierction-design__image"></div>
@@ -145,7 +136,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="uk-width-1-2">
 					<a href="" class="dierction-interior">
 						<span class="dierction-interior__image"></span>
@@ -155,11 +145,9 @@
 						</span>
 					</a>
 				</div>
-
 			</div>
 		</div>
 	</section>
-
 	<section class="section-portfolio">
 		<div class="uk-container">
 			<div class="section-title">
@@ -168,7 +156,6 @@
 					<a href="#" class="view-all">смотреть все</a>
 				</span>
 			</div>
-
 			<div class="uk-grid uk-grid-collapse uk-child-width-1-2">
 				<div>
 					<a href="#" class="portfolio-item uk-cover-container uk-flex uk-flex-column uk-flex-center uk-flex-middle">
@@ -205,13 +192,13 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="section-working">
 		<div class="uk-container">
 			<div class="section-title section-title--dark">
-				<span class="view-all">
+				<span class="section-title__text">
 					Как мы работаем
 				</span>
+			
 			</div>
 
 
