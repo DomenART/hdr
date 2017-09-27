@@ -14,7 +14,7 @@
 }
 
 .services-item {
-	padding: 30px 27px 20px;
+	padding: 30px 0 20px;
  	background-position: 50% 50%;
  	background-size: cover;
  	background-repeat: no-repeat;
@@ -22,6 +22,7 @@
  	&:nth-child(2) {
  		.services-item__title {
  			color: #fff;
+ 			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
  			&::before {
  				background-color: #fff;
  			} 
@@ -39,17 +40,40 @@
  	&:nth-child(3) {
  		.services-item__title {
  			color: #fff;
+ 			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
  			&::before {
  				background-color: #fff;
  			} 
+ 		}
+ 		.services-item__text { 
+ 			color: #fff;
+ 		}
+ 	}
+ 	&:nth-child(4) {
+ 		.services-item__title {
+ 			color: #fff;
+ 			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+ 			&::before {
+ 				background-color: #fff;
+ 			} 
+ 		}
+ 		.services-item__text { 
+ 			color: #fff;
+ 		}
+ 		.services-item__price {
+ 			color: #fff;
+ 			span {
+ 				color: #fff;
+ 			}
  		}
  	}
 }
 
 .services-item__title {
-	margin-bottom: 15px;
-	padding-left: 45px;
-	padding-bottom: 11px;
+	height: 48px;
+	margin: 0 27px 15px;
+	padding-left: 43px;
+	padding-bottom: 15px;	
 	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	font-family: @font-alt;
 	font-size: 24px;
@@ -69,6 +93,7 @@
 
 .services-item__text {
 	min-height: 200px;
+	padding: 0 27px 0 28px;
 	text-align: center;
 }
 
@@ -83,3 +108,87 @@
 	}
 }
 
+.packages-item {
+	padding: 22px 0;
+	border: 1px solid #d4d4d4;
+	&:nth-child(2n) {
+		background-color: #f3f2f2;
+	}
+}
+
+.packages-item__title {
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 28px;
+	line-height: 1;
+}
+
+.packages-item__desc {
+	margin-bottom: 23px;
+	text-align: center;
+	color: #666666;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.packages-item__actual-price {
+	margin-left: 40px;
+	color: #cc0000;
+	font-size: 66px;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.packages-item__unit {
+	position: relative;
+	top: -33px;
+	right: 15px;
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.packages-item__old-price {
+	margin-bottom: 40px;
+	margin-left: 40px;
+	color: #999999;
+	text-decoration: line-through;
+}
+
+.packages-item__text {
+	margin-left: 40px;
+	margin-bottom: 23px;
+	color: #666666;
+	font-size: 16px;
+}
+
+.button-intro--packages {
+	padding: 20px 50px;
+	background-color: #797977;
+	&:hover {
+		background-color: #41413f;
+	}
+	span {
+		margin-left: 37px;
+	}
+}
+
+.packages-item__button {
+	text-align: center;
+}
+
+.prices-cost {
+	background-color: #4d4d4c;
+}
+
+.prices-cost__text {
+	padding-left: 20px;
+	color: #fff;
+	h2 {
+		color: #fff;
+	}
+}
+
+.consult--prices {
+	position: static;
+	padding-right: 52px;
+}
