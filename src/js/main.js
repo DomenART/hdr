@@ -85,23 +85,12 @@ if (projectItem) {
 	}
 }
 
-/*import Vue from 'vue/dist/vue.js'
-// var Vue = require('vue')
-// var comprasion = require('./components/comprasion.vue')
-Vue.component('comprasion', require('./components/comprasion.vue'))
-var app = new Vue({ 
-	el: '#app'
-})*/
-
-// import Vue from 'vue/dist/vue.js'
-// Vue.component('comprasion', require('./components/comprasion.vue'))
-// var app = new Vue({ 
-// 	el: '#app'
-// })
-
 import Vue from 'vue'
 import comprasion from './components/comprasion.vue'
 
 var app = new Vue({ 
-	el: '#app'
+	el: '#app',
+	components: {
+		comprasion
+	}
 })
