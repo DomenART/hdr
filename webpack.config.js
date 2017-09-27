@@ -14,6 +14,12 @@ module.exports = {
 	},
 	module: {
 		rules: [{
+			test: /\.js$/,
+			loader: 'babel-loader',
+			query: {
+				presets: ['es2015']
+			}
+		}, {
 			test: /\.vue$/,
 			loader: 'vue-loader'
 		}, {
@@ -47,7 +53,11 @@ module.exports = {
 		}]
 	},
 
-	watch: true,
+	resolve: {
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
+	},
 
 	plugins: [
 		new ExtractTextPlugin('[name].css')
