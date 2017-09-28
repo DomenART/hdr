@@ -6,8 +6,8 @@
 		</header>
 
 		<div class="comprasion__arrows">
-			<span uk-icon="icon: arrow-left"></span>
-			<span uk-icon="icon: arrow-right"></span>
+			<span></span>
+			<span></span>
 		</div>
 
 		<figure class="comprasion">
@@ -42,7 +42,12 @@
 }
 
 .comprasion__arrows {
-
+	span:first-child {
+		width: 32px;
+		height: 21px;
+		display: inline-block;
+		background: url('../../img/icon-arrow-left.png') no-repeat 50% 50%;
+	}
 }
 
 .comprasion {
