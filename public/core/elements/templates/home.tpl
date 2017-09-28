@@ -107,7 +107,13 @@
 			<div class="section-about__content">{$_modx->resource.content}</div>
 		</div>
 	</section>
-	<comprasion></comprasion>
+	
+	<section class="section-comprasion">
+		<div class="uk-container">
+			<comprasion></comprasion>
+		</div>
+	</section>
+
 	<section class="section-directions">
 		<div class="uk-container">
 			<div class="dierctions uk-grid uk-grid-collapse">
