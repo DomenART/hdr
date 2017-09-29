@@ -1,10 +1,10 @@
-.prices-header {
-	padding-bottom: 332px;
-	background-color: #f7f7f4;
+.section-title--prices {
+	margin-top: 120px;
 }
 
 .pagetitle--prices {
-	max-width: 545px;
+	max-width: 600px;
+	margin-bottom: 95px;
 }
 
 .prices__text {
@@ -25,9 +25,9 @@
  			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
  			&::before {
  				background-color: #fff;
- 			} 
+ 			}
  		}
- 		.services-item__text { 
+ 		.services-item__text {
  			color: #fff;
  		}
  		.services-item__price {
@@ -43,9 +43,9 @@
  			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
  			&::before {
  				background-color: #fff;
- 			} 
+ 			}
  		}
- 		.services-item__text { 
+ 		.services-item__text {
  			color: #fff;
  		}
  	}
@@ -55,9 +55,9 @@
  			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
  			&::before {
  				background-color: #fff;
- 			} 
+ 			}
  		}
- 		.services-item__text { 
+ 		.services-item__text {
  			color: #fff;
  		}
  		.services-item__price {
@@ -71,9 +71,9 @@
 
 .services-item__title {
 	height: 48px;
-	margin: 0 27px 15px;
+	margin: 0 27px 10px;
 	padding-left: 43px;
-	padding-bottom: 15px;	
+	padding-bottom: 15px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	font-family: @font-alt;
 	font-size: 24px;
@@ -83,7 +83,7 @@
 	&::before {
 		content: '';
 		position: absolute;
-		top: 50%;
+		top: 39%;
 		left: 0;
 		width: 30px;
 		height: 1px;
@@ -92,7 +92,7 @@
 }
 
 .services-item__text {
-	min-height: 200px;
+	min-height: 225px;
 	padding: 0 27px 0 28px;
 	text-align: center;
 }
@@ -103,13 +103,14 @@
 	font-weight: 300;
 	line-height: 37px;
 	span {
+		margin-right: 12px;
 		color: #333333;
 		font-size: 66px;
 	}
 }
 
 .packages-item {
-	padding: 22px 0;
+	padding: 15px 0;
 	border: 1px solid #d4d4d4;
 	&:nth-child(2n) {
 		background-color: #f3f2f2;
@@ -117,6 +118,7 @@
 }
 
 .packages-item__title {
+  	min-height: 56px;
 	margin-bottom: 15px;
 	text-align: center;
 	font-size: 28px;
@@ -125,6 +127,7 @@
 
 .packages-item__desc {
 	margin-bottom: 23px;
+	padding: 0 9px;
 	text-align: center;
 	color: #666666;
 	font-size: 14px;
@@ -132,7 +135,7 @@
 }
 
 .packages-item__actual-price {
-	margin-left: 40px;
+	text-align: center;
 	color: #cc0000;
 	font-size: 66px;
 	font-weight: 300;
@@ -177,18 +180,123 @@
 }
 
 .prices-cost {
+	padding-bottom: 90px;
 	background-color: #4d4d4c;
 }
 
 .prices-cost__text {
-	padding-left: 20px;
 	color: #fff;
 	h2 {
+		font-size: 28px;
 		color: #fff;
 	}
 }
 
 .consult--prices {
 	position: static;
-	padding-right: 52px;
+	width: 100%;
+	margin-top: 83px;
+	padding-right: 40px;
+	.consult__text {
+		margin-bottom: 40px;
+	}
+}
+
+.prices-composition-slider {
+	width: 630px;
+	height: 423px;
+	position: relative;
+	left: -70px;
+	top: 10px;
+}
+
+.composition-slider__content {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 35px;
+	background-image: url('../img/composition-slider.png');
+	background-size: cover;
+	li {
+		width: 553px;
+		height: 346px;
+		margin-top: -24px;
+	}
+}
+
+.composition-slider__control {
+	margin-right: 20px;
+	padding-bottom: 19px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.composition-slider__counter {
+	margin-left: 35px;
+	color: #999999;
+	font-size: 18px;
+	span {
+		font-size: 24px;
+	}
+}
+
+.composition-slider__active {
+	color: #000;
+}
+
+.prices-compostion__list {
+	 list-style-type: none;
+	 counter-reset: composition;
+	 li {
+		 margin-bottom: 16px;
+		 position: relative;
+		 &::before {
+			 counter-increment: composition;
+	  		 content: counter(composition);
+			 position: absolute;
+			 left: -35px;
+			 top: 50%;
+			 transform: translateY(-50%) translateX(-50%);
+			 color: #999999;
+			 font-size: 30px;
+		 	 font-weight: 300;
+		  	 line-height: 1;
+
+		 }
+	}
+}
+
+.prices-calculations {
+	background-color: #f7f7f4;
+}
+
+.prices-calculations__text {
+	max-width: 980px;
+	margin: 0 auto 77px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.prices-calculations__tip {
+	margin-bottom: 53px;
+	padding: 17px 10px 15px;
+	border-top: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	text-align: center;
+	font-size: 16px;
+
+}
+
+.prices-calc-input {
+	border-radius: 3px;
+	border: 1px solid #e0e0e0;
+	background-color: #ffffff;
+}
+
+.prices-calc__input-box {
+	margin-bottom: 15px;
+}
+
+.prices-calc__desc {
+	color: #666666;
+	font-size: 16px;
+	font-style: italic;
 }

@@ -44,7 +44,7 @@
         margin: 0;
         padding: 0;
     }
-    li { 
+    li {
         color: #666666;
 		font-weight: 400;
 		letter-spacing: 1px;
@@ -191,7 +191,7 @@
 }
 
 .consult__title {
-	margin-bottom: 50px;
+	margin-bottom: 45px;
 	color: #ffffff;
 	font-size: 30px;
 	line-height: 1.2;
@@ -208,8 +208,9 @@
 }
 
 .button-intro--consult {
-	padding-left: 57px;
-	padding-right: 57px;
+	padding-top: 21px;
+	padding-left: 42px;
+	padding-right: 42px;
 	border: 1px solid #ffffff;
 	background-color: #990000;
 	font-weight: 500;
@@ -246,7 +247,6 @@
     transform: translate(64px, -50%);
     padding: 10px 0;
     display: inline-block;
-
     &:hover {
         text-decoration: none;
         color: #fefefe;
@@ -255,8 +255,7 @@
             width: 80%;
         }
     }
-
-    &:before {
+    &::before {
         content: '';
         position: absolute;
         width: 40px;
@@ -267,15 +266,12 @@
         transform: translateX(-50%);
         transition: all .3s ease;
     }
-
     .section-title--dark & {
         color: #000000;
-
         &:hover {
             color: #000000;
         }
-
-        &:before {
+        &::before {
             background-color: #000000;
         }
     }
@@ -285,10 +281,8 @@
     background-color: #000;
     min-height: 400px;
     text-decoration: none;
-
     &:hover {
         text-decoration: none;
-
         .portfolio-item__image {
             opacity: 0.5;
             transform: translate(-50%,-50%) scale(1.1, 1.1);
@@ -311,9 +305,11 @@
         }
     }
 }
+
 .portfolio-item__image {
     transition: all 1s ease;
 }
+
 .portfolio-item__title {
     color: #ffffff;
     font-family: @font-alt;
@@ -327,6 +323,7 @@
     opacity: 0;
     transform: translateY(-10px);
 }
+
 .portfolio-item__line {
     margin: 12px auto 18px;
     width: 84%;
@@ -335,6 +332,7 @@
     display: block;
     opacity: 0;
 }
+
 .portfolio-item__desc {
     color: #ffffff;
     font-size: 14px;
@@ -344,4 +342,8 @@
     position: relative;
     opacity: 0;
     transform: translateY(10px);
+}
+
+.form-required {
+	color: #ff0000;
 }
