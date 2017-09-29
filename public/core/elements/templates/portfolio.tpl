@@ -37,11 +37,12 @@
 				  	'includeTVs' => 'project_image',
 		            'tvPrefix' => '',
 					'tpl' => '@FILE chunks/portfolio-item.tpl',
+					'frontend_js' => 'assets/template/pdopage.js',
 					'ajaxMode' => 'button',
 					'ajaxElemMore' => '#pdopage .js-portfolio-more',
 					'ajaxTplMore' => '@INLINE <div class="portfolio-pool__control uk-flex uk-flex-around uk-flex-center@s uk-flex-middle uk-flex-wrap">
 							<button type="button" class="uk-button button-intro button-intro--portfolio js-portfolio-more">Показать ещё<span class="button-intro__arrow"></span></button>
-							<a href="#" class="view-all view-all--portfolio">показать все</a>
+							<button type="button" class="view-all view-all--portfolio js-portfolio-more-all">показать все</button>
 					</div>',
 					'where' => ['class_key' => 'ticket']
 				]}

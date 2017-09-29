@@ -26,17 +26,37 @@ if (env === 'production') {
 
 // Main Settings config
 module.exports = {
-	entry: PATHS.source + 'js/main.js',
+	entry: {
+		main: PATHS.source + 'js/main.js',
+		pdopage: PATHS.source + 'js/pdopage.js'
+	},
 	output: {
 		path: PATHS.build,
 		filename: '[name].js'
 	},
 	module: {
 		rules: [{
+			test: /\.js$/,
+			exclude: /(node_modules|bower_components)/,
+			use: {
+				loader: 'babel-loader',
+				options: {
+					presets: ['es2015']
+				}
+			}
+		}, {
 			test: /\.vue$/,
 			loader: 'vue-loader',
 			options: {
-				extractCSS: true
+				extractCSS: true,
+				loaders: {
+					js: {
+						loader: 'babel-loader',
+						options: {
+							presets: ['es2015']
+						}
+					}
+				}
 			}
 		}, {
 			test: /\.less$/,
@@ -48,13 +68,6 @@ module.exports = {
 					loader: "less-loader"
 				}]
 			})
-		}, {
-			test: /\.js$/,
-			loader: 'babel-loader',
-			exclude: /node_modules/,
-			query: {
-				presets: ['es2015']
-			}
 		}, {
 			test: /\.(png|jpg|gif|svg)$/,
 			use: [{

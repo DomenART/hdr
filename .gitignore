@@ -1,5 +1,6 @@
 public/
 !public/core/elements
+!public/assets/template
 node_modules/
 sources/
 *.sublime-project
