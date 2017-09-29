@@ -4,7 +4,8 @@
 	margin: 0 auto;
 	text-transform: uppercase;
 	@media (max-width: @breakpoint-xsmall-max) {
-		padding-bottom: 100px;
+		padding-bottom: 50px;
+		font-size: 30px
 	}
 }
 
@@ -15,7 +16,10 @@
 	width: 100%;
 	height: 761px;
 	background-size: cover;
-
+	@media (max-width: @breakpoint-xsmall-max) {
+		height: auto;
+		min-height: 100vh;
+	}
 }
 
 .project-bar {
@@ -24,7 +28,6 @@
     @media (max-width: @breakpoint-xsmall-max) {
     	padding: 20px 10px;
     }
-
 }
 
 .project-bar__prev,
@@ -43,14 +46,14 @@
 		margin-right: 50px;
 	}
 	@media (max-width: @breakpoint-xsmall-max) {
-		margin-bottom: 50px;
+		width: 100%;
+		margin-bottom: 10px;
+		margin-right: 0;
 	}
 }
 
 .project-bar__links {
 	display: block;
-	padding-top: 42px;
-/* 	padding-bottom: 21px; */
 	position: relative;
 	color: #999999;
 	font-size: 12px;
@@ -58,49 +61,20 @@
 		color: darken(#999999, 30%);
 		text-decoration: none;
 	}
-	span {
-		&::before {
-			content: '';
-			width: 33px;
-			height: 1px;
-			background-color: #666666;
-			position: absolute;
-			left: 50%;
-			bottom: 54%;
-			transform: translateX(-50%) translateY(-50%);
-			transform-origin: 50% 50%;
-		}
-		&::after {
-			content: '';
-			width: 6px;
-			height: 6px;
-			bottom: 48%;
-			border-right: 2px solid #666666;
-			border-bottom: 2px solid #666666;
-			position: absolute;
-			transform: translateY(-50%);
-			transform-origin: 50% 50%;
-		}
+	img {
+		display: block;
+		padding: 20px 15px;
 	}
-	&:first-of-type {
-		margin-right: 30px;
-		span {
-			&::after {
-				left: 18px;
-				transform: rotate(135deg);	
-			}
-		}
-	}	
-	&:last-of-type {
-		span {
-			&::after {
-				right: 15px;
-				transform: rotate(-45deg);
-			}
+	span {
+		@media (max-width: @breakpoint-xsmall-max) {
+			display: none;
 		}
 	}
 }
 
+.link-prev {
+		margin-right: 31px;
+}
 
 .project-bar__year {
 	margin-right: 31px;

@@ -10,15 +10,12 @@
 			</div>
 			<h1 class="pagetitle pagetitle--white pagetitle--project">{$_modx->resource.longtitle ?: $_modx->resource.pagetitle}</h1>
 			<div class="project-bar uk-flex uk-flex-wrap uk-flex-middle">
-				<div class="project-bar__control uk-flex uk-flex-middle">
-					<a href="#" class="project-bar__links">
-						<span></span>предыдущий
-					</a>
-					<a href="#" class="project-bar__links">
-						<span></span>следующий
-					</a>
-				</div>
-				<div class="project-bar__info uk-flex uk-flex-wrap">
+				{'pdoNeighbors' | snippet : [
+					'tplPrev' => '@INLINE <span class="link-prev"><a href="/{$uri}" class="project-bar__links"><img src="assets/template/img/project-arr-left.svg" alt=""><span>предыдущий</span></a></span>',
+					'tplNext' => '@INLINE <span class="link-next"><a href="/{$uri}" class="project-bar__links"><img src="assets/template/img/project-arr-right.svg" alt=""><span>следующий</span></a></span>',
+					'tplWrapper' => '@INLINE <div class="project-bar__control uk-flex uk-flex-middle uk-flex-between uk-flex-left@s">{$prev}{$next}</div>'
+				]}
+				<div class="project-bar__info uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s">
 					<div class="project-bar__year">
 						2017
 					</div>
@@ -45,7 +42,7 @@
 						{if $row['text']}
 							<div class="project-item__text">{$row.text | nl2br}</div>
 						{/if}
-						{if $row['consult']} 
+						{if $row['consult']}
 							<div class="consult">
 								<div class="consult__text">
 									Бесплатная консультация<br>
