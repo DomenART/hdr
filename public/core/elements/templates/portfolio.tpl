@@ -20,35 +20,35 @@
 		</div>
 		<div class="filter__category">
 			<select class="uk-select filter__select">
-				<option selected>Архитектурное проектирование</option>	
+				<option selected>Архитектурное проектирование</option>
 			</select>
 		</div>
 	</div>
 </div>
 <div class="portfolio-pool">
 	<div class="uk-container">
-	<div id="pdopage">
-		<div class="rows uk-grid uk-grid-collapse uk-child-width-1-2@m">
+		<div id="pdopage">
 
-		{'!pdoPage' | snippet : [
-			'element' => 'pdoResources',
-			'depth' => 2,
-			'limit' => 4,
-		  	'includeTVs' => 'project_image',
-            'tvPrefix' => '',
-			'tpl' => '@FILE chunks/portfolio-item.tpl',
-			'ajaxMode' => 'button',
-			'ajaxTplMore' => '@INLINE <button class="btn btn-default btn-more">Показать ещё</button>',
-			'where' => ['class_key' => 'ticket']
-		]}
+			<div class="rows uk-grid uk-grid-collapse uk-child-width-1-2@m">
+				{'!pdoPage' | snippet : [
+					'element' => 'pdoResources',
+					'depth' => 2,
+					'limit' => 4,
+				  	'includeTVs' => 'project_image',
+		            'tvPrefix' => '',
+					'tpl' => '@FILE chunks/portfolio-item.tpl',
+					'ajaxMode' => 'button',
+					'ajaxElemMore' => '#pdopage .js-portfolio-more',
+					'ajaxTplMore' => '@INLINE <div class="portfolio-pool__control uk-flex uk-flex-around uk-flex-center@s uk-flex-middle uk-flex-wrap">
+							<button type="button" class="uk-button button-intro button-intro--portfolio js-portfolio-more">Показать ещё<span class="button-intro__arrow"></span></button>
+							<a href="#" class="view-all view-all--portfolio">показать все</a>
+					</div>',
+					'where' => ['class_key' => 'ticket']
+				]}
+			</div>
+			{$_modx->getPlaceholder('page.nav')}
+		</div>
 
-		</div>
-		{$_modx->getPlaceholder('page.nav')}
-	</div>
-		<div class="portfolio-pool__control uk-flex uk-flex-around uk-flex-center@s uk-flex-middle uk-flex-wrap">
-				<button type="button" class="uk-button button-intro button-intro--portfolio">Показать еще<span class="button-intro__arrow"></span></button>
-				<a href="#" class="view-all view-all--portfolio">показать все</a>
-		</div>
 	</div>
 </div>
 <div class="substrate"></div>
