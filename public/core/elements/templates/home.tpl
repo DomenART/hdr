@@ -58,7 +58,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="slide uk-flex uk-flex-middle uk-flex-center" style="background-image: url('assets/template/img/26566002706_73efdae8e4_o.jpg')">
+			<li class="slide uk-flex uk-flex-middle uk-flex-center" style="background-image: url('assets/template/img/slide-2.jpg')">
 				<div class="slide__inner">
 					<div class="slide__type">Спецпредложение</div>
 					<div class="slide__title">Планировочное решение 2</div>
@@ -69,7 +69,7 @@
 					</div>
 				</div>
 			</li>
-			<li class="slide uk-flex uk-flex-middle uk-flex-center" style="background-image: url('assets/template/img/40c810ff5b71441cc9f807a1acccf6ad.png')">
+			<li class="slide uk-flex uk-flex-middle uk-flex-center" style="background-image: url('assets/template/img/slide-3.jpg')">
 				<div class="slide__inner">
 					<div class="slide__type">Спецпредложение</div>
 					<div class="slide__title">Планировочное решение 3</div>
@@ -110,7 +110,7 @@
 	
 	<section class="section-comprasion">
 		<div class="uk-container">
-			<comprasion></comprasion>
+			<comprasion initial-images='{$_modx->resource.comprasion}'></comprasion>
 		</div>
 	</section>
 

@@ -8,6 +8,13 @@ import '../less/main.less'
 /*--------------------------------------------------*/
 
 /**
+ * axios for ajax requests
+ */
+window.axios = require('axios')
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+window.fade = require('fade')
+
+/**
  * Include Vue
  */
 import Vue from 'vue'
