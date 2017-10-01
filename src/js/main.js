@@ -76,25 +76,6 @@ if(window.innerWidth > 960) {
 }
 
 /**
- * Kern Burns effect on portfolio item
- */
-var portfolioItems = document.querySelectorAll('.portfolio-item')
-if(portfolioItems.length) {
-	for(let i = 0; i < portfolioItems.length; i++) {
-		let item = portfolioItems[i]
-		let image = item.querySelector('.portfolio-item__image')
-
-		item.onmousemove = function(e) {
-			let offset = item.getBoundingClientRect()
-			let x = (e.clientX-offset.left)/item.offsetWidth*100
-			let y = (e.clientY-offset.top)/item.offsetHeight*100
-
-			image.style.transformOrigin = x + '% ' + y + '%'
-		}
-	}
-}
-
-/**
  * Split projects into two columns
  */
 var projectItems = document.querySelectorAll('.js-project-item')

@@ -54,7 +54,7 @@
 					<div class="slide__title">Планировочное решение 1</div>
 					<div class="slide__desc">Вы приобрели новую квартиру, дом или решили сделать ремонт? Грамотный и правильный ремонт любого интерьера, всегда должен начинаться с планировочного решения — это основа для всех ремонтных работ. Спланированный интерьер вашей квартиры или дома, даст гармонию, комфорт и индивидуальную атмосферу вашего интерьера. Совершенно неважно планируете Вы ремонт однокомнатной квартиры или загородного дома, профессиональный подход избавит Вас от лишних трат времени и денег и в том, и в другом случае.</div>
 					<div class="slide__more">
-						<a href="#" class="uk-button button-intro">Узнать больше&emsp;<span class="button-intro__arrow"></span></a>
+						<a href="#" class="uk-button button-intro">Узнать больше<span class="button-arrow"></span></a>
 					</div>
 				</div>
 			</li>
@@ -65,7 +65,7 @@
 					<div class="slide__desc">
 					Вы приобрели новую квартиру, дом или решили сделать ремонт? Грамотный и правильный ремонт любого интерьера, всегда должен начинаться с планировочного решения — это основа для всех ремонтных работ. Спланированный интерьер вашей квартиры или дома, даст гармонию, комфорт и индивидуальную атмосферу вашего интерьера. Совершенно неважно планируете Вы ремонт однокомнатной квартиры или загородного дома, профессиональный подход избавит Вас от лишних трат времени и денег и в том, и в другом случае.</div>
 					<div class="slide__more">
-						<a href="#" class="uk-button button-intro">Узнать больше&emsp;<span class="button-intro__arrow"></span></a>
+						<a href="#" class="uk-button button-intro">Узнать больше<span class="button-arrow"></span></a>
 					</div>
 				</div>
 			</li>
@@ -76,7 +76,7 @@
 					<div class="slide__desc">
 					Вы приобрели новую квартиру, дом или решили сделать ремонт? Грамотный и правильный ремонт любого интерьера, всегда должен начинаться с планировочного решения — это основа для всех ремонтных работ. Спланированный интерьер вашей квартиры или дома, даст гармонию, комфорт и индивидуальную атмосферу вашего интерьера. Совершенно неважно планируете Вы ремонт однокомнатной квартиры или загородного дома, профессиональный подход избавит Вас от лишних трат времени и денег и в том, и в другом случае.</div>
 					<div class="slide__more">
-						<a href="#" class="uk-button button-intro">Узнать больше&emsp;<span class="button-intro__arrow"></span></a>
+						<a href="#" class="uk-button button-intro">Узнать больше<span class="button-arrow"></span></a>
 					</div>
 				</div>
 			</li>
@@ -119,11 +119,14 @@
 			<div class="dierctions uk-grid uk-grid-collapse">
 				<div class="uk-width-1-2">
 					<a href="" class="dierction-styles uk-flex uk-flex-middle">
-						<span class="dierction-styles__title">Исторические стили интерьера</span>
+						<span class="dierction-styles__title">
+							<span>Исторические стили интерьера</span>
+						</span>
 					</a>					
 				</div>
 				<div class="uk-width-1-2">
-					<div class="dierction-consult">		
+					<div class="dierction-consult uk-flex">
+						{include 'file:partials/consult.tpl'}
 					</div>
 				</div>
 				<div class="uk-width-1-2">
@@ -143,12 +146,17 @@
 					</div>
 				</div>
 				<div class="uk-width-1-2">
-					<a href="" class="dierction-interior">
-						<span class="dierction-interior__image"></span>
-						<span class="dierction-interior__title">
-							Качественный<br>
-							и функциональный интерьер
+					<a href="" class="dierction-planning uk-flex uk-flex-middle">
+						<div class="dierction-planning__image"></div>
+						<span class="dierction-planning__title">
+							<span>Архитектурное проектирование</span>
 						</span>
+					</a>					
+				</div>
+				<div class="uk-width-1-2"></div>
+				<div class="uk-width-1-2">
+					<a href="" class="dierction-interior">
+						<span>Качественный<br>и функциональный интерьер</span>
 					</a>
 				</div>
 			</div>

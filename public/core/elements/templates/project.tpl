@@ -43,14 +43,7 @@
 							<div class="project-item__text">{$row.text | nl2br}</div>
 						{/if}
 						{if $row['consult']}
-							<div class="consult">
-								<div class="consult__text">
-									Бесплатная консультация<br>
-									от дизайнера<br>
-									House Room Design
-								</div>
-								<button class="uk-button button-intro button-intro--consult">Заказать<span class="button-intro__arrow"></span></button>
-							</div>
+							{include 'file:partials/consult.tpl'}
 						{/if}
 					</div>
 					{/foreach}

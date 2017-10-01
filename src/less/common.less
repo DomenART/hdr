@@ -130,27 +130,21 @@
 	font-size: 18px;
 	color: #fefefe;
 	line-height: 1;
+	transition: 0.2s ease-out;
 	&:hover {
 		background-color: #d00;
 		color: #fff;
-		.button-intro__arrow {
-			transition: 0.5s;
-			&::before {
-				width: 26px;
-				right: -5px;
-				transition: 0.2s ease-out;
-			}
-			&::after {
-				right: -6px;
-				transition: 0.2s ease-out;
-			}
-		}
 	}
 }
 
-.button-intro__arrow {
+.button-arrow {
 	position: relative;
+	display: inline-block;
+	width: 21px;
+	height: 7px;
 	margin-left: 17px;
+	vertical-align: middle;
+	top: -2px;
 	&::before {
 		content: '';
 		width: 21px;
@@ -174,20 +168,39 @@
 		transform: rotate(-45deg) translateY(-50%);
 		transition: 0.2s ease-out;
 	}
+	*:hover>& {
+		&::before {
+			width: 26px;
+			right: -5px;
+			transition: 0.2s ease-out;
+		}
+		&::after {
+			right: -6px;
+			transition: 0.2s ease-out;
+		}
+	}
+}
+
+.button-framed {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.9px;
+	padding: 10px 60px;
+	background: transparent;
+	border: 1px solid #fff;
+	transition: 0.2s ease-out;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+		color: #fff;
+	}
 }
 
 .consult {
-	width: 600px;
 	box-sizing: border-box;
-	padding: 60px 199px 93px 99px;
+	padding: 40px 100px 70px;
 	background-color: #cc0000;
-	position: absolute;
-	top: 0;
-	right: 0;
-	@media (max-width: @breakpoint-medium-max) {
-		width: 300px;
-		padding: 30px;
-	}
+	width: 100%;
 }
 
 .consult__title {
@@ -206,8 +219,8 @@
 		font-size: 18px;
 	}
 }
-
-.button-intro--consult {
+.consult__button {
+	margin-bottom: 30px;
 	padding-top: 21px;
 	padding-left: 42px;
 	padding-right: 42px;
@@ -216,21 +229,7 @@
 	font-weight: 500;
 	letter-spacing: 1px;
 	&:hover {
-		.button-intro__arrow {
-			&::before {
-				width: 36px;
-				right: -6px;
-			}
-			&::after {
-				right: -7px;
-			}
-		}
-	}
-	.button-intro__arrow {
-		margin-left: 40px;
-		&::before {
-			width: 30px;
-		}
+
 	}
 }
 
