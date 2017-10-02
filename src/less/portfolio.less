@@ -15,18 +15,21 @@
 		li {
 			display: inline-block;
 			margin: 5px 5px 5px 10px;
+			padding: 7px 0;
+			color: #333333;
 			&:first-of-type {
 				margin-left: 0;
 			}
-			a {
-				padding: 7px 0;
-				color: #333333;
-				&:hover {
-					color: #333333;
-					text-decoration: none;
-					border-bottom: 1px solid #cc0000;
-				}
-			}
+		}
+		label {
+			cursor: pointer;
+		}
+		input:checked ~ label {
+			font-weight: 500;
+			border-bottom: 1px solid #cc0000;
+		}
+		input {
+			display: none;
 		}
 	}
 }
@@ -49,7 +52,7 @@
 	&::after {
 		content: '';
 		position: absolute;
-		top: 100px;
+		top: 190px;
 		left: 0;
 		width: 100%;
 		height: 100%;

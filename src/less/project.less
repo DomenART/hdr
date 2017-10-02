@@ -17,8 +17,7 @@
 	height: 761px;
 	background-size: cover;
 	@media (max-width: @breakpoint-xsmall-max) {
-		height: auto;
-		min-height: 100vh;
+		height: 500px;
 	}
 }
 
@@ -44,10 +43,11 @@
 	margin-right: 140px;
 	@media (max-width: @breakpoint-small-max) {
 		margin-right: 50px;
+		margin-bottom: 20px;
 	}
 	@media (max-width: @breakpoint-xsmall-max) {
 		width: 100%;
-		margin-bottom: 10px;
+		margin-bottom: 0;
 		margin-right: 0;
 	}
 }
@@ -73,7 +73,14 @@
 }
 
 .link-prev {
-		margin-right: 31px;
+	margin-right: 31px;
+}
+
+.project-bar__info {
+	@media (max-width: @breakpoint-xsmall-max) {
+		width: 100%;
+		margin-top: -55px;
+	}
 }
 
 .project-bar__year {
@@ -81,11 +88,17 @@
 	font-size: 24px;
 	line-height: 1.5;
 	letter-spacing: 2px;
+	@media (max-width: @breakpoint-xsmall-max) {
+		margin-right: 0;
+	}
 }
 
 .project-bar__desc {
 	font-size: 14px;
 	line-height: 1.2;
+	@media (max-width: @breakpoint-xsmall-max) {
+		display: none;
+	}
 }
 
 .project__category {
@@ -132,4 +145,10 @@
 		padding: 50px;
 		font-size: 18px;
 	}
+}
+
+.project-consult {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
