@@ -26,7 +26,7 @@
 			<span class="comprasion__handle" @mousedown="down"></span>
 		</figure>
 
-		<div class="comprasion-carousel uk-grid uk-child-width-1-4">
+		<div class="comprasion-carousel uk-grid uk-child-width-1-2 uk-child-width-1-4@s">
 			<div v-for="(item, index) in images" :key="item.MIGX_id" :class="'comprasion-carousel__item' + (index==main?' active':'')" @click="setMain(index)">
 				<div class="comprasion-carousel__image"><img :src="item.image" alt=""></div>
 				<div class="comprasion-carousel__title" v-html="item.name"></div>
@@ -184,6 +184,12 @@
 <style lang="less">
 .comprasion__header {
 	margin-bottom: 20px;
+    @media (max-width:959px) {
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-bottom: 36px;
+    }
 }
 
 .comprasion__title {
@@ -192,6 +198,10 @@
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 1;
+    @media (max-width:959px) {
+		width: 100%;
+		margin-bottom: 22px;
+    }
 }
 
 .comprasion__select {
@@ -221,6 +231,9 @@
 			background: url('../../img/icon-arrow-right.svg') no-repeat 50% 50%;
 		}
 	}
+    @media (max-width:959px) {
+		display: none;
+    }
 }
 
 .comprasion {
@@ -303,6 +316,7 @@
 }
 
 .comprasion-carousel__item {
+	margin-bottom: 10px;
 	&:hover,
 	&.active {
 		opacity: 1;
@@ -330,5 +344,8 @@
 	color: #cccccc;
 	font-size: 16px;
 	line-height: 1.8;
+    @media (max-width:959px) {
+		display: none;
+    }
 }
 </style>

@@ -309,9 +309,8 @@
     background-color: #fff;
     overflow: hidden;
     padding: 105px 0 110px;
-    @media (max-width:@breakpoint-medium-max) {
-        padding-left: 11%;
-        padding-right: 11%;
+    @media (max-width:@breakpoint-small-max) {
+        padding: 50px 11%;
     }
 }
 
@@ -346,14 +345,24 @@
 
 .section-directions {
     background-color: #f7f7f4;
+    @media (max-width:@breakpoint-small-max) {
+        padding: 0 11%;
+        >.uk-container {
+            padding: 0;
+        }
+    }
 }
 
-.dierction-consult {
+.direction-consult {
     height: 400px;
     transform: translateY(-200px);
+    @media (max-width:@breakpoint-small-max) {
+        transform: translateY(0);
+        order: -1;
+    }
 }
 
-.dierction-styles {
+.direction-styles {
     background: url('../img/direction-1.jpg');
     background-size: cover;
     text-decoration: none;
@@ -362,13 +371,13 @@
     padding: 45px 100px 20px;
     &:hover {
         text-decoration: none;
-        .dierction-styles__title span {
+        .direction-styles__title span {
             border-bottom-color: #fff;
         }
     }
 }
 
-.dierction-styles__title {
+.direction-styles__title {
     position: relative;
     color: #ffffff;
     font-family: @font-alt;
@@ -382,7 +391,7 @@
     }
 }
 
-.dierction-design {
+.direction-design {
     min-height: 400px;
     position: relative;
     background-color: #000;
@@ -390,7 +399,7 @@
     padding: 40px 100px 20px;
 }
 
-.dierction-design__image {
+.direction-design__image {
     position: absolute;
     left: 0;
     top: 0;
@@ -402,12 +411,12 @@
     opacity: .6;
 }
 
-.dierction-design__container {
+.direction-design__container {
     position: relative;
     padding-left: 50px;
 }
 
-.dierction-design__title {
+.direction-design__title {
     color: #ffffff;
     font-family: @font-alt;
     font-size: 30px;
@@ -427,7 +436,7 @@
     }
 }
 
-.dierction-design__list {
+.direction-design__list {
     padding: 0 0 0 46px;
     margin: 0;
     line-height: 1.5;
@@ -452,7 +461,7 @@
     }
 }
 
-.dierction-planning {
+.direction-planning {
     text-decoration: none;
     min-height: 400px;
     box-sizing: border-box;
@@ -461,13 +470,13 @@
     background-color: #635446;
     &:hover {
         text-decoration: none;
-        .dierction-planning__title span {
+        .direction-planning__title span {
             border-bottom-color: #fff;
         }
     }
 }
 
-.dierction-planning__image {
+.direction-planning__image {
     position: absolute;
     left: 0;
     top: 0;
@@ -478,7 +487,7 @@
     opacity: .6;
 }
 
-.dierction-planning__title {
+.direction-planning__title {
     position: relative;
     color: #ffffff;
     font-family: @font-alt;
@@ -492,7 +501,7 @@
     }
 }
 
-.dierction-interior {
+.direction-interior {
     display: block;
     text-decoration: none;
     padding: 70px 100px;
@@ -517,6 +526,12 @@
 .section-title {
     text-align: center;
     margin: 150px 0 60px;
+    @media (max-width:@breakpoint-small-max) {
+        margin: 36px 0;
+        &--with-all {
+            margin-bottom: 90px;
+        }
+    }
 }
 
 .section-title__text {
@@ -543,6 +558,16 @@
 
         &::before {
             background-color: #000000;
+        }
+    }
+}
+
+.section {
+    @media (max-width:@breakpoint-small-max) {
+        padding: 0 11%;
+        >.uk-container {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
@@ -821,6 +846,9 @@
 .home-text {
     max-width: 800px;
     padding: 135px 0;
+    @media (max-width:@breakpoint-small-max) {
+        padding: 60px 0;
+    }
     h2 {
         color: #000000;
         font-size: 32px;
@@ -907,6 +935,9 @@
 .footer__logo {
     margin-bottom: 38px;
     filter: grayscale(100%);
+    @media (max-width: @breakpoint-small-max) {
+        margin-bottom: 10px;
+    }
 }
 
 .footer__rights {
@@ -939,6 +970,10 @@
     margin-bottom: 32px;
     padding-top: 11px;
     border-bottom: 1px solid #ccc;
+    @media (max-width: @breakpoint-small-max) {
+        margin-bottom: 22px;
+        padding-top: 32px;
+    }
 }
 
 .footer__menu {
@@ -988,6 +1023,9 @@
 
 .footer-second {
     padding-top: 11px;
+    @media (max-width: @breakpoint-small-max) {
+        padding-bottom: 11px;
+    }
 }
 
 .footer__copyright {
@@ -1043,4 +1081,8 @@
 .section-comprasion {
     background-color: #373736;
     padding: 55px 0 280px;
+    @media (max-width:@breakpoint-small-max) {
+        padding: 55px 30px;
+        margin: 0 11%;
+    }
 }

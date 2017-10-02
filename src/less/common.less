@@ -217,9 +217,6 @@
 	margin-bottom: 85px;
 	font-size: 24px;
 	color: #fff;
-	@media (max-width: @breakpoint-medium-max) {
-		font-size: 18px;
-	}
 }
 .consult__button {
 	margin-bottom: 30px;
@@ -278,6 +275,12 @@
         &::before {
             background-color: #000000;
         }
+	}
+	
+    @media (max-width:@breakpoint-small-max) {
+		left: 50%;
+		top: 54px;
+		transform: translate(-50%,0);
     }
 }
 
