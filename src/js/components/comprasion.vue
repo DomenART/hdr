@@ -10,24 +10,24 @@
 			<span></span>
 		</div>
 
-		<figure class="comprasion">
-			<div class="comprasion__wrap">
-				<div class="comprasion__main">
-					<img :src="images[main].image" alt="">
-				</div>
-				<div class="comprasion__second">
-					<img :src="images[second].image" alt="">
-				</div>
+		<figure class="comprasion" :style="{width: width + 'px', height: height + 'px'}">
+			<div class="comprasion__main" :style="{backgroundImage:'url(' + images[main].image + ')'}">
+				<div class="comprasion__main__mask"></div>
+			</div>
+
+			<div class="comprasion__second" :style="{backgroundImage:'url(' + images[second].image + ')'}">
+				<div class="comprasion__second__mask"></div>
 			</div>
 
 			<span class="comprasion__label comprasion__label--main" v-show="!hideMainLabel">{{ images[main].name }}</span>
+
 			<span class="comprasion__label comprasion__label--second" v-show="!hideSecondLabel">{{ images[second].name }}</span>
 
 			<span class="comprasion__handle" @mousedown="down"></span>
 		</figure>
 
 		<div class="comprasion-carousel uk-grid uk-child-width-1-4">
-			<div v-for="(item, index) in images" :class="'comprasion-carousel__item' + (index==main?' active':'')" @click="setMain(index)">
+			<div v-for="(item, index) in images" :key="item.MIGX_id" :class="'comprasion-carousel__item' + (index==main?' active':'')" @click="setMain(index)">
 				<div class="comprasion-carousel__image"><img :src="item.image" alt=""></div>
 				<div class="comprasion-carousel__title" v-html="item.name"></div>
 			</div>
@@ -36,6 +36,8 @@
 </template>
 
 <script>
+	import Velocity from 'velocity-animate'
+
 	module.exports = {
 		props: ['initialImages'],
 
@@ -45,12 +47,17 @@
 				main: 0,
 				second: 1,
 				hideMainLabel: false,
-				hideSecondLabel: false
+				hideSecondLabel: false,
+				baseWidth: 1200,
+				baseHeight: 460,
+				width: 1200,
+				height: 460
 			}
 		},
 
 		mounted () {
-			this.updateClip()
+			this.resize()
+  			window.addEventListener('resize', this.resize)
 		},
 
 		computed: {
@@ -62,8 +69,16 @@
 				return this.container.querySelector('.comprasion__main')
 			},
 
+			mainImageMask () {
+				return this.container.querySelector('.comprasion__main__mask')
+			},
+
 			secondImage () {
 				return this.container.querySelector('.comprasion__second')
+			},
+
+			secondImageMask () {
+				return this.container.querySelector('.comprasion__second__mask')
 			},
 
 			mainLabel () {
@@ -116,7 +131,7 @@
 
 				this.updateClip({
 					x: left,
-					y: this.mainImage.offsetHeight
+					y: this.height
 				})
 			},
 
@@ -125,48 +140,50 @@
 
 				return {
 					x: left + (this.handle.offsetWidth / 2),
-					y: this.mainImage.offsetHeight
+					y: this.height
 				}
 			},
 
 			setMain (index) {
 				if(index == this.main) return
 
+				let main = this.main
+				let second = this.second
+
+				this.second = this.main
+				this.main = index
+
 				/**
 				 * Анимация перехода для основного изображния
 				 */
-				let mainImageMask = document.createElement('img')
-				this.mainImage.appendChild(mainImageMask)
-				mainImageMask.onload = () => {
-					fade.out(mainImageMask, () => {
-						mainImageMask.parentNode.removeChild(mainImageMask)
-					})
-				}
-				mainImageMask.src = this.images[this.main].image
+				this.mainImageMask.style.backgroundImage = 'url(' + this.images[main].image + ')'
+				this.mainImageMask.style.opacity = 1
+				Velocity(this.mainImageMask, {opacity: 0}, { duration: 300 })
 
 				/**
 				 * Анимация перехода для второстепенного изображния 
 				 */
-				let secondImageMask = document.createElement('img')
-				this.secondImage.appendChild(secondImageMask)
-				secondImageMask.onload = () => {
-					fade.out(secondImageMask, () => {
-						secondImageMask.parentNode.removeChild(secondImageMask)
-					})
-				}
-				secondImageMask.src = this.images[this.second].image
-
-				this.second = this.main
-				this.main = index
+				this.secondImageMask.style.backgroundImage = 'url(' + this.images[second].image + ')'
+				this.secondImageMask.style.opacity = 1
+				Velocity(this.secondImageMask, {opacity: 0}, { duration: 300 })
 			},
 
+			reset () {
+				this.handle.style.left = ''
+				this.updateClip()
+			},
 
+			resize () {
+				this.height = this.container.offsetWidth / this.baseWidth * this.baseHeight
+				this.reset()
+			}
 		}
 	}
 </script>
 
 <style lang="less">
 .comprasion__header {
+	margin-bottom: 20px;
 }
 
 .comprasion__title {
@@ -191,10 +208,12 @@
 
 .comprasion__arrows {
 	text-align: center;
+	margin-bottom: 10px;
 	span {
 		width: 32px;
 		height: 21px;
 		display: inline-block;
+    	margin: 8px;
 		&:first-child {
 			background: url('../../img/icon-arrow-left.svg') no-repeat 50% 50%;
 		}
@@ -207,14 +226,12 @@
 .comprasion {
 	position: relative;
 	border-bottom: 1px solid #828281;
+	max-width: 100%;
+	margin: 0 0 30px;
 }
 
-.comprasion__wrap {
-	position: relative;
-	width: 1200px;
-	height: 460px;
-}
-
+.comprasion__main__mask,
+.comprasion__second__mask,
 .comprasion__second,
 .comprasion__main {
 	position: absolute;
@@ -222,17 +239,9 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	img {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		-webkit-user-select: none;  
-		-moz-user-select: none;    
-		-ms-user-select: none;      
-		user-select: none;
-	}
+	background-position: 50% 50%;
+	background-size: cover;
+	background-color: rgba(255,255,255,0);
 }
 
 .comprasion__label {
@@ -320,6 +329,6 @@
 .comprasion-carousel__title {
 	color: #cccccc;
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.8;
 }
 </style>
