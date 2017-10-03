@@ -41,7 +41,7 @@
 		]}
 	</div>
 
-	<div class="slideshow" id="slideshow">
+	<section class="slideshow" id="slideshow">
 		<ul class="uk-hidden" uk-switcher="connect: .js-slideshow">
 			<li></li>
 			<li></li>
@@ -99,7 +99,8 @@
 			</div>
 			<a href="#second" class="slide-bar__arrow" uk-scroll><i uk-icon="icon: arrow-down; ratio: 1.2"></i></a>
 		</div>
-	</div>
+	</section>
+	
 	<section class="section-about" id="second">
 		<div class="uk-container">
 			<div class="section-about__desc">{$_modx->resource.description}</div>
@@ -161,7 +162,7 @@
 		</div>
 	</section>
 
-	<section class="section section-portfolio">
+	<section class="section-portfolio">
 		<div class="uk-container">
 			<div class="section-title section-title--with-all">
 				<span class="section-title__text">
@@ -206,7 +207,7 @@
 		</div>
 	</section>
 
-	<section class="section section-working">
+	<section class="section-working">
 		<div class="uk-container">
 			<div class="section-title section-title--dark">
 				<span class="section-title__text">
@@ -214,7 +215,7 @@
 				</span>
 			</div>
 
-			<div class="working-list uk-grid uk-grid-collapse uk-child-width-1-2 uk-child-width-1-4@m">
+			<div class="working-list uk-grid uk-grid-collapse uk-child-width-1-2@s uk-child-width-1-4@m">
 				<div class="working-item uk-cover-container">
 					<img src="assets/template/img/working-1.jpg" alt="" class="working-item__image" uk-cover>
 					<div class="working-item__container">
@@ -259,7 +260,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section class="section-life">
 		<div class="uk-container">
 			<div class="section-title section-title--dark">
 				<span class="section-title__text">
@@ -330,11 +331,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-
-	<section class="section">
-		<div class="uk-container">
+			
 			<div class="home-text">
 				<h2>Сео-текст заголовок 2</h2>
 				<h3>Что вы получаете, делая заказ в студии дизайна?</h3>
@@ -366,7 +363,7 @@
 		</div>
 	</section>
 
-	<footer class="section">
+	<footer class="section-footer">
 		<section class="footer-first uk-container">
 			<div class="uk-grid" uk-grid>
 				<div class="uk-width-2-5@m">
@@ -444,7 +441,7 @@
 
 				<div class="uk-width-3-5@m">
 					<div class="footer__right uk-flex uk-flex-between uk-flex-middle">
-						<div class="uk-flex uk-flex-between uk-flex-middle">
+						<div class="uk-flex uk-flex-between uk-flex-middle uk-width-1-1 uk-width-auto@s">
 							<a href="#" class="footer__sitemap">Карта сайта</a>
 							<div class="footer__counters">
 								[^t^]

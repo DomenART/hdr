@@ -197,10 +197,13 @@
 	font-family: 'Museo Sans', sans-serif;
 	font-size: 24px;
 	font-weight: 500;
-	line-height: 1;
+	line-height: 1.125;
     @media (max-width:959px) {
 		width: 100%;
 		margin-bottom: 22px;
+    }
+    @media (max-width:639px) {
+		margin-bottom: 30px;
     }
 }
 
@@ -214,6 +217,9 @@
 		color: #fff;
 		text-decoration: none;
 	}
+    @media (max-width:639px) {
+		font-size: 16px;
+    }
 }
 
 .comprasion__arrows {
