@@ -1,11 +1,9 @@
-public/assets/components
-public/assets/images
-public/connectors
-public/core
-public/manager
-public/.htaccess
-public/config.core.php
-public/index.php
+public/*
+!public/core/elements/
+!public/assets/template/
+!public/_backup/
+!public/_data/
+!public/.gitify
 node_modules/
 sources/
 *.sublime-project
