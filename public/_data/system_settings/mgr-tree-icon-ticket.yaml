@@ -1,0 +1,4 @@
+key: mgr_tree_icon_ticket
+value: 'icon icon-comment-o'
+namespace: tickets
+area: tickets.main

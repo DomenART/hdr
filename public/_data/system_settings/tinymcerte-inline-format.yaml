@@ -1,0 +1,5 @@
+key: tinymcerte.inline_format
+value: '[{"title": "Bold", "icon": "bold", "format": "bold"},{"title": "Italic", "icon": "italic", "format": "italic"},{"title": "Underline", "icon": "underline", "format": "underline"},{"title": "Strikethrough", "icon": "strikethrough", "format": "strikethrough"},{"title": "Superscript", "icon": "superscript", "format": "superscript"},{"title": "Subscript", "icon": "subscript", "format": "subscript"},{"title": "Code", "icon": "code", "format": "code"}]'
+xtype: textarea
+namespace: tinymcerte
+area: tinymcerte.style_formats

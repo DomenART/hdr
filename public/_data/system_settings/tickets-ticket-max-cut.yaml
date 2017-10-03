@@ -1,0 +1,5 @@
+key: tickets.ticket_max_cut
+value: '1000'
+xtype: numberfield
+namespace: tickets
+area: tickets.ticket

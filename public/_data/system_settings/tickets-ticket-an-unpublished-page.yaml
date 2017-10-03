@@ -1,0 +1,5 @@
+key: tickets.unpublished_ticket_page
+value: '0'
+xtype: numberfield
+namespace: tickets
+area: tickets.ticket

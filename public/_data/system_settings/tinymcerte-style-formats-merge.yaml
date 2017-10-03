@@ -1,0 +1,4 @@
+key: tinymcerte.style_formats_merge
+xtype: combo-boolean
+namespace: tinymcerte
+area: tinymcerte.style_formats

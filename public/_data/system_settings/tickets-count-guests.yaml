@@ -1,0 +1,4 @@
+key: tickets.count_guests
+xtype: combo-boolean
+namespace: tickets
+area: tickets.ticket

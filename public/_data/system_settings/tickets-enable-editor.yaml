@@ -1,0 +1,5 @@
+key: tickets.enable_editor
+value: '1'
+xtype: combo-boolean
+namespace: tickets
+area: tickets.main

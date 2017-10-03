@@ -1,0 +1,4 @@
+key: ap_tpl_outer
+value: tpl.AdminPanel.outer
+namespace: adminpanel
+area: ap_style

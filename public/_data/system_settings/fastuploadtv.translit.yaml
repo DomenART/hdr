@@ -1,0 +1,4 @@
+key: fastuploadtv.translit
+xtype: combo-boolean
+namespace: fastuploadtv
+area: Default

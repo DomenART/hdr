@@ -1,0 +1,4 @@
+key: tinymcerte.paste_as_text
+xtype: combo-boolean
+namespace: tinymcerte
+area: default

@@ -1,0 +1,13 @@
+id: 5
+source: 1
+type: migx
+name: comprasion
+caption: Сравнение
+category: Параметры
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: "a:7:{s:7:\"configs\";s:0:\"\";s:8:\"formtabs\";s:442:\"[\n  {\n    \"caption\": \"Заголовок\",\n    \"fields\": [\n      {\n        \"field\": \"image\",\n        \"caption\": \"Изображение\",\n        \"inputTV\": \"image\",\n        \"sourceFrom\": \"migx\"\n      },\n      {\n        \"field\": \"name\",\n        \"caption\": \"Название\",\n        \"inputTVtype\": \"text\"\n      },\n      {\n        \"field\": \"url\",\n        \"caption\": \"Адрес ссылки\",\n        \"inputTVtype\": \"text\"\n      }\n    ]\n  }\n]\";s:7:\"columns\";s:246:\"[{\n  \"renderer\": \"this.renderImage\",\n  \"sourceFrom\": \"migx\",\n  \"header\": \"Изображение\",\n  \"dataIndex\": \"image\"\n},{\n  \"header\": \"Название\",\n  \"dataIndex\": \"name\"\n},{\n  \"header\": \"Адрес ссылки\",\n  \"dataIndex\": \"url\"\n}]\";s:7:\"btntext\";s:0:\"\";s:10:\"previewurl\";s:0:\"\";s:10:\"jsonvarkey\";s:0:\"\";s:19:\"autoResourceFolders\";s:5:\"false\";}"
+output_properties: 'a:0:{}'
+content: ''
