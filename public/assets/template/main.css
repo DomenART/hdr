@@ -11650,6 +11650,7 @@ td.uk-text-break {
 @media (max-width: 639px) {
   .pagetitle {
     font-size: 35px;
+    margin-top: 50px;
     margin-bottom: 50px;
     letter-spacing: 5px;
   }
@@ -13715,6 +13716,12 @@ td.uk-text-break {
   left: 50%;
   background-color: rgba(255, 255, 255, 0.48);
 }
+.contacts-info a {
+  color: #fff;
+}
+.contacts-info a:hover {
+  color: #fff;
+}
 @media (max-width: 639px) {
   .contacts-info {
     position: static;
@@ -14121,6 +14128,9 @@ td.uk-text-break {
   top: 0;
   right: 0;
 }
+.prices-header {
+  background-color: #f7f7f4;
+}
 .section-title--prices {
   margin-top: 120px;
 }
@@ -14128,10 +14138,18 @@ td.uk-text-break {
   max-width: 600px;
   margin-bottom: 95px;
 }
+@media (max-width: 639px) {
+  .pagetitle--prices {
+    margin-bottom: 50px;
+  }
+}
 .prices__text {
   max-width: 795px;
   margin: 0 auto 145px;
   text-align: center;
+}
+.prices-services {
+  background: linear-gradient(to bottom, #f7f7f4 52%, #ffffff 52%);
 }
 .services-item {
   padding: 30px 0 20px;
@@ -14208,6 +14226,11 @@ td.uk-text-break {
   padding: 0 27px 0 28px;
   text-align: center;
 }
+@media (max-width: 639px) {
+  .services-item__text {
+    text-align: left;
+  }
+}
 .services-item__price {
   text-align: center;
   font-size: 33px;
@@ -14219,9 +14242,15 @@ td.uk-text-break {
   color: #333333;
   font-size: 66px;
 }
+.prices-packages {
+  background: linear-gradient(to bottom, #ffffff 50%, #4d4d4c 50%);
+}
 .packages-item {
   padding: 15px 0;
   border: 1px solid #d4d4d4;
+}
+.packages-item:nth-child(n) {
+  background-color: #fff;
 }
 .packages-item:nth-child(2n) {
   background-color: #f3f2f2;
@@ -14261,6 +14290,11 @@ td.uk-text-break {
   color: #999999;
   text-decoration: line-through;
 }
+@media (max-width: 639px) {
+  .packages-item__old-price {
+    text-align: center;
+  }
+}
 .packages-item__text {
   margin-left: 40px;
   margin-bottom: 23px;
@@ -14273,9 +14307,6 @@ td.uk-text-break {
 }
 .button-intro--packages:hover {
   background-color: #41413f;
-}
-.button-intro--packages span {
-  margin-left: 37px;
 }
 .packages-item__button {
   text-align: center;
@@ -14295,29 +14326,47 @@ td.uk-text-break {
   position: static;
   width: 100%;
   margin-top: 83px;
-  padding-right: 40px;
+  padding: 60px 0px 90px 100px;
 }
 .consult--prices .consult__text {
   margin-bottom: 40px;
 }
+.consult--prices .button-framed {
+  padding: 10px 45px;
+}
+@media (max-width: 639px) {
+  .consult--prices {
+    padding: 30px;
+  }
+}
+.prices-composition {
+  padding-bottom: 66px;
+}
 .prices-composition-slider {
-  width: 630px;
-  height: 423px;
+  max-width: 634px;
+  margin-left: -70px;
+  margin-top: 10px;
+  margin-bottom: 78px;
+}
+@media (max-width: 1599px) {
+  .prices-composition-slider {
+    margin: 0 auto;
+  }
+}
+.composition-slider {
   position: relative;
-  left: -70px;
-  top: 10px;
 }
 .composition-slider__content {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 35px;
-  background-image: url(img/composition-slider.png?c3007fe4fddbcfa6edc4d8be0466bf66);
-  background-size: cover;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 89%;
+  height: 85%;
 }
 .composition-slider__content li {
-  width: 553px;
-  height: 346px;
-  margin-top: -24px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 .composition-slider__control {
   margin-right: 20px;
@@ -14325,6 +14374,7 @@ td.uk-text-break {
   border-bottom: 1px solid #e6e6e6;
 }
 .composition-slider__counter {
+  width: 100px;
   margin-left: 35px;
   color: #999999;
   font-size: 18px;
@@ -14336,6 +14386,7 @@ td.uk-text-break {
   color: #000;
 }
 .prices-compostion__list {
+  max-width: 450px;
   list-style-type: none;
   counter-reset: composition;
 }
@@ -14355,7 +14406,19 @@ td.uk-text-break {
   font-weight: 300;
   line-height: 1;
 }
+@media (max-width: 1599px) {
+  .prices-compostion__list {
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 639px) {
+  .prices-compostion__list {
+    padding-left: 60px;
+  }
+}
 .prices-calculations {
+  padding-bottom: 57px;
   background-color: #f7f7f4;
 }
 .prices-calculations__text {
@@ -14364,7 +14427,16 @@ td.uk-text-break {
   text-align: center;
   font-size: 24px;
 }
-.prices-calculations__tip {
+@media (max-width: 639px) {
+  .prices-calculations__text {
+    font-size: 18px;
+  }
+}
+.calculation__container {
+  max-width: 784px;
+  margin: 0 auto;
+}
+.calculation__tip {
   margin-bottom: 53px;
   padding: 17px 10px 15px;
   border-top: 1px solid #e9e9e9;
@@ -14372,18 +14444,46 @@ td.uk-text-break {
   text-align: center;
   font-size: 16px;
 }
-.prices-calc-input {
+.calculation__title {
+  margin-top: 6px;
+}
+.calculation__input {
   border-radius: 3px;
   border: 1px solid #e0e0e0;
   background-color: #ffffff;
 }
-.prices-calc__input-box {
-  margin-bottom: 15px;
-}
-.prices-calc__desc {
+.calculation__desc {
+  margin-top: 15px;
   color: #666666;
   font-size: 16px;
   font-style: italic;
+}
+.calculation__meter {
+  margin-left: 5px;
+  margin-top: 6px;
+}
+.calculation__submit {
+  padding-top: 23px;
+  border-top: 1px solid #e9e9e9;
+}
+.calculation__row {
+  margin-bottom: 30px;
+}
+@media (max-width: 639px) {
+  .calculation__row {
+    margin-bottom: 0;
+  }
+}
+.calculation__conditions {
+  color: #666666;
+  font-size: 16px;
+}
+.calculation__conditions a {
+  color: #666666;
+  text-decoration: underline;
+}
+.button-intro--calculation {
+  margin-top: 27px;
 }
 
 .comprasion__header {
