@@ -17,7 +17,7 @@
 			]}
 			<div class="project-bar__info uk-flex uk-flex-wrap uk-flex-center uk-flex-left@s">
 				<div class="project-bar__year">
-					{$_modx->resource.description}
+					{$publishedon | date_format : '%Y'}
 				</div>
 				<div class="project-bar__desc">
 					{$_modx->resource.introtext}

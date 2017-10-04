@@ -1,3 +1,7 @@
+.prices-header {
+	background-color: #f7f7f4;
+}
+
 .section-title--prices {
 	margin-top: 120px;
 }
@@ -5,12 +9,19 @@
 .pagetitle--prices {
 	max-width: 600px;
 	margin-bottom: 95px;
+	@media (max-width: @breakpoint-xsmall-max) {
+		margin-bottom: 50px;
+	}
 }
 
 .prices__text {
 	max-width: 795px;
 	margin: 0 auto 145px;
 	text-align: center;
+}
+
+.prices-services {
+	background: linear-gradient(to bottom, #f7f7f4 52%, #ffffff 52%)
 }
 
 .services-item {
@@ -95,6 +106,9 @@
 	min-height: 225px;
 	padding: 0 27px 0 28px;
 	text-align: center;
+	@media (max-width: @breakpoint-xsmall-max) {
+		text-align: left;
+	}
 }
 
 .services-item__price {
@@ -109,9 +123,16 @@
 	}
 }
 
+.prices-packages {
+	background: linear-gradient(to bottom, #ffffff 50%, #4d4d4c 50%)
+}
+
 .packages-item {
 	padding: 15px 0;
 	border: 1px solid #d4d4d4;
+	&:nth-child(n) {
+		background-color: #fff;
+	}
 	&:nth-child(2n) {
 		background-color: #f3f2f2;
 	}
@@ -155,6 +176,9 @@
 	margin-left: 40px;
 	color: #999999;
 	text-decoration: line-through;
+	@media (max-width: @breakpoint-xsmall-max) {
+		text-align: center;
+	}
 }
 
 .packages-item__text {
@@ -169,9 +193,6 @@
 	background-color: #797977;
 	&:hover {
 		background-color: #41413f;
-	}
-	span {
-		margin-left: 37px;
 	}
 }
 
@@ -196,30 +217,46 @@
 	position: static;
 	width: 100%;
 	margin-top: 83px;
-	padding-right: 40px;
+	padding: 60px 0px 90px 100px;
 	.consult__text {
 		margin-bottom: 40px;
 	}
+	.button-framed {
+		padding: 10px 45px;
+	}
+	@media (max-width: @breakpoint-xsmall-max) {
+		padding: 30px;
+	}
+}
+
+.prices-composition {
+	padding-bottom: 66px;
 }
 
 .prices-composition-slider {
-	width: 630px;
-	height: 423px;
+	max-width: 634px;
+	margin-left: -70px;
+	margin-top: 10px;
+	margin-bottom: 78px;
+	@media (max-width: @breakpoint-large-max) {
+		margin: 0 auto;
+	}
+}
+
+.composition-slider {
 	position: relative;
-	left: -70px;
-	top: 10px;
 }
 
 .composition-slider__content {
-	width: 100%;
-	height: 100%;
-	margin-bottom: 35px;
-	background-image: url('../img/composition-slider.png');
-	background-size: cover;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 89%;
+	height: 85%;
 	li {
-		width: 553px;
-		height: 346px;
-		margin-top: -24px;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
 	}
 }
 
@@ -230,6 +267,7 @@
 }
 
 .composition-slider__counter {
+	width: 100px;
 	margin-left: 35px;
 	color: #999999;
 	font-size: 18px;
@@ -243,12 +281,13 @@
 }
 
 .prices-compostion__list {
-	 list-style-type: none;
-	 counter-reset: composition;
-	 li {
-		 margin-bottom: 16px;
-		 position: relative;
-		 &::before {
+	max-width: 450px;
+	list-style-type: none;
+	counter-reset: composition;
+	li {
+	 	margin-bottom: 16px;
+	 	position: relative;
+	 	&::before {
 			 counter-increment: composition;
 	  		 content: counter(composition);
 			 position: absolute;
@@ -259,12 +298,19 @@
 			 font-size: 30px;
 		 	 font-weight: 300;
 		  	 line-height: 1;
-
-		 }
+	 	}
+	}
+	@media (max-width: @breakpoint-large-max) {
+		margin: 0 auto;
+		padding-top: 50px;
+	}
+	@media (max-width: @breakpoint-xsmall-max) {
+		padding-left: 60px;
 	}
 }
 
 .prices-calculations {
+	padding-bottom: 57px;
 	background-color: #f7f7f4;
 }
 
@@ -273,30 +319,68 @@
 	margin: 0 auto 77px;
 	text-align: center;
 	font-size: 24px;
+	@media (max-width: @breakpoint-xsmall-max) {
+		font-size: 18px;
+	}
 }
 
-.prices-calculations__tip {
+.calculation__container {
+	max-width: 784px;
+	margin: 0 auto;
+}
+
+.calculation__tip {
 	margin-bottom: 53px;
 	padding: 17px 10px 15px;
 	border-top: 1px solid #e9e9e9;
 	border-bottom: 1px solid #e9e9e9;
 	text-align: center;
 	font-size: 16px;
-
 }
 
-.prices-calc-input {
+.calculation__title {
+	margin-top: 6px;
+}
+
+.calculation__input {
 	border-radius: 3px;
 	border: 1px solid #e0e0e0;
 	background-color: #ffffff;
 }
 
-.prices-calc__input-box {
-	margin-bottom: 15px;
-}
-
-.prices-calc__desc {
+.calculation__desc {
+	margin-top: 15px;
 	color: #666666;
 	font-size: 16px;
 	font-style: italic;
+}
+
+.calculation__meter {
+	margin-left: 5px;
+	margin-top: 6px;
+}
+
+.calculation__submit {
+	padding-top: 23px;
+	border-top: 1px solid #e9e9e9;
+}
+
+.calculation__row {
+	margin-bottom: 30px;
+	@media (max-width: @breakpoint-xsmall-max) {
+		margin-bottom: 0;
+	}
+}
+
+.calculation__conditions {
+	color: #666666;
+	font-size: 16px;
+	a {
+		color: #666666;
+		text-decoration: underline;
+	}
+}
+
+.button-intro--calculation {
+	margin-top: 27px;
 }

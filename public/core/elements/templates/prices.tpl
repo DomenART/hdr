@@ -21,40 +21,19 @@
 				Цены на услуги House Design Room
 			</span>
 		</div>
-		<div class="uk-grid uk-grid-collapse uk-child-width-1-4" uk-height-match="target: .services-item__text">
-			<div class="services-item" style="background-image: url('assets/template/img/service-image-1.jpg')">
-				<div class="services-item__title">Планировочное решение</div>
-				<div class="services-item__text">с расстановкой мебели</div>
-				<div class="services-item__price">
-					<span>799</span>
-					руб/м<sup>2</sup>
+		<div class="uk-grid uk-grid-collapse uk-child-width-1-2@s uk-child-width-1-4@l" uk-height-match="target: .services-item__text">
+			{foreach $_modx->resource['prices.pricelist'] | json_decode as $row}
+				<div class="services-item" style="background-image: url('{$row.image}')">
+					<div class="services-item__title">{$row.title | nl2br}</div>
+					<div class="services-item__text">{$row.desc | nl2br}</div>
+					<div class="services-item__price">
+						<span>{$row.price}</span>
+						руб/м<sup>2</sup>
+					</div>
 				</div>
-			</div>
-			<div class="services-item" style="background-image: url('assets/template/img/services-image-2.jpg')">
-				<div class="services-item__title">3D-<br>визуализация</div>
-				<div class="services-item__text">будущего интерьера</div>
-				<div class="services-item__price">
-					<span>2590</span>
-					руб/м<sup>2</sup>
-				</div>
-			</div>
-			<div class="services-item" style="background-image: url('assets/template/img/services-image-3.jpg')">
-				<div class="services-item__title">Строительные чертежи</div>
-				<div class="services-item__text">полный комплект</div>
-				<div class="services-item__price">
-					<span>1290</span>
-					руб/м<sup>2</sup>
-				</div>
-			</div>
-			<div class="services-item" style="">
-				<div class="services-item__title">Подбор материалов</div>
-				<div class="services-item__text">и мебели для интерьера</div>
-				<div class="services-item__price">
-					<span>899</span>
-					руб/м<sup>2</sup>
-				</div>
-			</div>
+			{/foreach}
 		</div>
+	</div>
 </section>
 <section class="prices-packages">
 	<div class="uk-container">
@@ -64,106 +43,27 @@
 			</span>
 		</div>
 		<div class="js-packages-wrapper uk-grid uk-grid-collapse uk-child-width-1-4">
-			<div class="packages-item">
-				<div class="packages-item__title uk-flex uk-flex-middle uk-flex-center">«ПРОЕКТ»</div>
-				<div class="packages-item__desc uk-flex uk-flex-middle uk-flex-center">Хороший выбор при удаленной работе:</div>
-				<div class="packages-item__actual-price">
-					<span>7 990</span>
-					<sup class="packages-item__unit">
-						руб/м<sup>2</sup>
-					</sup>
+			{foreach $_modx->resource['prices.packages'] | json_decode as $row}
+				<div class="packages-item">
+					<div class="packages-item__title uk-flex uk-flex-middle uk-flex-center">{$row.title}</div>
+					<div class="packages-item__desc uk-flex uk-flex-middle uk-flex-center">{$row.subtitle}</div>
+					<div class="packages-item__actual-price">
+						<span>{$row.price}</span>
+						<sup class="packages-item__unit">
+							руб/м<sup>2</sup>
+						</sup>
+					</div>
+					<div class="packages-item__old-price">
+						{$row.oldprice} руб.
+					</div>
+					<div class="packages-item__text">
+						{$row.desc | nl2br}
+					</div>
+					<div class="packages-item__button">
+						<a href="{$row.link}" class="uk-button button-intro button-intro--packages">Заказать<span class="button-arrow"></span></a>
+					</div>
 				</div>
-				<div class="packages-item__old-price">
-					9000 руб.
-				</div>
-				<div class="packages-item__text">
-					ВКЛЮЧАЕТ:<br>
-					— Планировочное решение<br>
-					— 3Д Визуализации<br>
-					— Подбор материалов<br>
-					— Строительные чертежи
-				</div>
-				<div class="packages-item__button">
-					<a href="#" class="uk-button button-intro button-intro--packages">Заказать<span class="button-intro__arrow"></span></a>
-				</div>
-			</div>
-			<div class="packages-item">
-				<div class="packages-item__title uk-flex uk-flex-middle uk-flex-center">«С АВТОРСКИМ НАДЗОРОМ»</div>
-				<div class="packages-item__desc uk-flex uk-flex-middle uk-flex-center">Оптимальный пакет, подходит для большинства:</div>
-				<div class="packages-item__actual-price">
-					<span>11 990</span>
-					<sup class="packages-item__unit">
-						руб/м<sup>2</sup>
-					</sup>
-				</div>
-				<div class="packages-item__old-price">
-					14000 руб.
-				</div>
-				<div class="packages-item__text">
-					Включает:<br>
-					— Планировочное решение<br>
-					— 3Д Визуализации<br>
-					— Подбор материалов<br>
-					— Строительные чертежи<br>
-					— Авторский надзор
-				</div>
-				<div class="packages-item__button">
-					<a href="#" class="uk-button button-intro button-intro--packages">Заказать<span class="button-intro__arrow"></span></a>
-				</div>
-			</div>
-			<div class="packages-item">
-				<div class="packages-item__title uk-flex uk-flex-middle uk-flex-center">«ВСЕ ВКЛЮЧЕНО»</div>
-				<div class="packages-item__desc uk-flex uk-flex-middle uk-flex-center">Все организационные вопросы мы берем на себя, вам нужно будет только въехать в новую квартиру без забот:</div>
-				<div class="packages-item__actual-price">
-					<span>19 990</span>
-					<sup class="packages-item__unit">
-						руб/м<sup>2</sup>
-					</sup>
-				</div>
-				<div class="packages-item__old-price">
-					23000 руб.
-				</div>
-				<div class="packages-item__text">
-					Включает:<br>
-					— Планировочное решение<br>
-					— 3Д Визуализации<br>
-					— Подбор материалов<br>
-					— Строительные чертежи<br>
-					— Авторский надзор<br>
-					<br>
-					+ Поставки мебели и материалов<br>
-					+ Финальное декорирование<br>
-					+ Неограниченное количество правок
-
-				</div>
-				<div class="packages-item__button">
-					<a href="#" class="uk-button button-intro button-intro--packages">Заказать<span class="button-intro__arrow"></span></a>
-				</div>
-			</div>
-			<div class="packages-item">
-				<div class="packages-item__title uk-flex uk-flex-middle uk-flex-center">«Индивидуальный»</div>
-				<div class="packages-item__desc uk-flex uk-flex-middle uk-flex-center">Оптимальный пакет, подходит для большинства:</div>
-				<div class="packages-item__actual-price">
-					<span>11 990</span>
-					<sup class="packages-item__unit">
-						руб/м<sup>2</sup>
-					</sup>
-				</div>
-				<div class="packages-item__old-price">
-					9000 руб.
-				</div>
-				<div class="packages-item__text">
-					Включает:<br>
-					— 1<br>
-					— 2<br>
-					— 3<br>
-					— 4<br>
-					— 5
-				</div>
-				<div class="packages-item__button">
-					<a href="#" class="uk-button button-intro button-intro--packages">Заказать<span class="button-intro__arrow"></span></a>
-				</div>
-			</div>
+			{/foreach}
 		</div>
 	</div>
 </section>
@@ -174,7 +74,7 @@
 				ЧТО ВХОДИТ В СТОИМОСТЬ?
 			</span>
 		</div>
-		<div class="uk-grid uk-child-width-1-2">
+		<div class="uk-grid uk-child-width-1-2@m">
 			<div>
 				<div class="consult consult--prices">
 					<div class="consult__title">С ЧЕГО НАЧАТЬ?</div>
@@ -182,22 +82,12 @@
 						Запишитесь на консультацию<br>
 						с возможностью выезда на ваш объект
 					</div>
-					<button class="uk-button button-intro button-intro--consult">Записаться<span class="button-intro__arrow"></span></button>
+					<button class="uk-button button-framed button-intro--consult">Записаться<span class="button-arrow"></span></button>
 				</div>
 			</div>
-			<div>
+			<div class="uk-flex-first uk-flex-last@m">
 				<div class="prices-cost__text">
-					<h2>Что такое Lorem Ipsum?</h2>
-					<p>
-					Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
-					</p>
-					<p>
-					В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-					</p>
-					<h2>Почему он используется?</h2>
-					<p>
-					Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."
-					</p>
+					{$_modx->resource['prices.cost']}
 				</div>
 			</div>
 		</div>
@@ -210,49 +100,48 @@
 				 СОСТАВ ДИЗАЙН-ПРОЕКТА
 			</span>
 		</div>
-		<div class="uk-grid uk-child-width-1-2">
+		<div class="uk-grid uk-child-width-1-2@xl">
 			<div>
 			  	<div class="prices-composition-slider">
-					<ul class="uk-hidden" uk-switcher="connect: .js-prices-slider">
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-					<ul class="composition-slider__content uk-flex uk-flex-middle uk-flex-center uk-switcher js-prices-slider">
-						<li style="background-image: url('assets/template/img/project-1.jpg')"></li>
-						<li style="background-image: url('assets/template/img/project-2.jpg')"></li>
-						<li style="background-image: url('assets/template/img/project-3.jpg')"></li>
-					</ul>
+					<div class="composition-slider">
+						<img src="assets/template/img/composition-slider.png">
+						<ul class="uk-hidden" uk-switcher="connect: .js-prices-slider">
+						 {foreach $_modx->resource['prices.slider'] | json_decode as $row}
+						 	<li>{$key}</li>
+						 {/foreach}
+						</ul>
+						<ul class="composition-slider__content uk-switcher js-prices-slider">
+							{foreach $_modx->resource['prices.slider'] | json_decode as $row}
+							   <li style="background-image: url('{$row.image}')"></li>
+							{/foreach}
+						</ul>
+					</div>
 					<div class="composition-slider__control uk-flex uk-flex-right uk-flex-middle">
 						<div class="slide-bar__arrows js-prices-slider">
 							<span uk-switcher-item="previous"><i uk-icon="icon: chevron-left"></i></span>
 							<span uk-switcher-item="next"><i uk-icon="icon: chevron-right"></i></span>
 						</div>
 						<div class="composition-slider__counter">
-							<span class="uk-switcher js-prices-slider"><span class="composition-slider__active">1</span><span class="composition-slider__active">2</span>
-							<span class="composition-slider__active">3</span> из 16
+							<span class="uk-switcher js-prices-slider">
+								{foreach $_modx->resource['prices.slider'] | json_decode as $key => $row}
+									<span class="composition-slider__active">
+										{$key+1}
+									</span>
+								{/foreach}
+							</span>
+								из
+								<span class="composition-slider__active">
+									{count($_modx->resource['prices.slider'] | json_decode)}
+								</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div>
 				<ol class="prices-compostion__list">
-					<li>Обмерный чертеж объекта</li>
-					<li>План расстановки мебели и оборудования</li>
-					<li>План демонтажа перегородок и инженерных коммуникаций</li>
-					<li>План возводимых перегородок</li>
-					<li>План потолка с указанием типа используемого материала, отдельных узлов и сечений</li>
-					<li>План размещения осветительных приборов</li>
-					<li>План привязки выключателей с указанием включения групп светильников</li>
-					<li>План электрики и электровыводов с привязками</li>
-					<li>План полов</li>
-					<li>План размещения сантехнического оборудования</li>
-					<li>3D-визуализации помещений</li>
-					<li>План размещения электрического подогрева пола*</li>
-					<li>Развёртка стен с раскладкой кафельной плитки с указанием размеров*</li>
-					<li>Чертежи заказных изделий*</li>
-					<li>Спецификация дверных проёмов и полотен*</li>
-					<li>Ведомость отделки помещений*</li>
+					{foreach $_modx->resource['prices.slider'] | json_decode as $row}
+						<li>{$row.text}</li>
+					{/foreach}
 				</ol>
 			</div>
 		</div>
@@ -262,127 +151,23 @@
 	<div class="uk-container">
 		<div class="section-title section-title--dark">
 			<span class="section-title__text">
-				Рассчитать стоимость
+				РАССЧИТАТЬ СТОИМОСТЬ
 			</span>
 		</div>
 		<div class="prices-calculations__text">
 			Узнайте сколько вам нужно будет потратить на: дизайнера, мебель, технику, материалы и отделочные работы. Мы бесплатно проконсультируем, о том где можно купить как дорогие, качественные материалы, так и недорогие с хорошим соотношением цена/качества.
 	    </div>
-		<div class="prices-calculations__tip">
-			Введите ваши данные и мы рассчитаем стоимость дизайн проекта в 3-х категориях<br>
-				<span class="form-required">*</span>Поле “Телефон” обязательно для заполнения
+		<div class="calculation__container">
+			<div class="calculation__tip">
+				Введите ваши данные и мы рассчитаем стоимость дизайн проекта в 3-х категориях<br>
+					<span class="form-required">*</span>Поле “Телефон” обязательно для заполнения
+			</div>
+			{'!AjaxForm@Form' | snippet : [
+				'emailSubject'  => 'Расчёт стоимости',
+				'validate'      => 'nomail:blank,phone:tel:required',
+				'form'          => '@FILE chunks/forms/calculation-form.tpl'
+			]}
 		</div>
-		<form class="prices-calc">
-			<div class="uk-grid uk-child-width-1-2">
-				<div>
-					<div class="uk-grid uk-grid-collapse uk-flex-top">
-						<div class="uk-width-1-6">
-							Стиль
-						</div>
-						<div cass="uk-width-5-6">
-							<div class="prices-calc__input-box">
-								<input type="text" class="uk-input prices-calc-input" placeholder="Классический">
-							</div>
-							<div class="prices-calc__desc">
-								Выберите стиль интерьера, который вам больше нравится
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="uk-flex uk-flex-middle">
-						<div class="prices-calc__title">
-							Площадь
-						</div>
-						<div>
-							<div class="prices-calc__input-box">
-								<input type="text" class="uk-input prices-calc-input" placeholder="100">
-							</div>
-							<div class="prices-calc__desc">
-								Введите площадь (по полу)вашего помещения
-							</div>
-						</div>
-						<div>
-							м<sup>2</sup>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="uk-grid uk-child-width-1-2">
-				<div>
-					<div class="uk-flex uk-flex-middle">
-						<div class="prices-calc__title">
-							Место
-						</div>
-						<div>
-							<div class="prices-calc__input-box">
-								<input type="text" class="uk-input prices-calc-input" placeholder="Севастополь">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="uk-flex uk-flex-middle">
-						<div class="prices-calc__title">
-							Место
-						</div>
-						<div>
-							<div class="prices-calc__input-box">
-								<input type="text" class="uk-input prices-calc-input" placeholder="Севастополь">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prices-calc__desc">
-				Введите город или название населенного пункта, где находится ваш объект
-			</div>
-			<div class="uk-grid uk-child-width-1-2">
-				<div>
-					<div class="uk-flex uk-flex-middle">
-						<div class="prices-calc__title">
-							Имя
-						</div>
-						<div>
-							<div class="prices-calc__input-box">
-								<input type="text" class="uk-input prices-calc-input" placeholder="Севастополь">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="uk-flex uk-flex-middle">
-						<div class="prices-calc__title">
-						 	Телефон<span class="form-required">*</span>
-						</div>
-						<div>
-							<div class="prices-calc__input-box">
-								<input type="tel" class="uk-input prices-calc-input" placeholder="+7 123 000 00 00" required>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prices-calc__desc">
-				Введите данные, по которым с вами можно связаться после расчета стоимости
-			</div>
-			<div class="prices-calc__submit uk-grid">
-				<div class="uk-width-2-3">
-					<input type="checkbox" name="price-calc-check" checked>
-					<div class="price-calc__conditions">
-						Нажимая кнопку “Отправить”, подтверждаю, что прочитал(-а) <a href="#">Конфиденциальное соглашение</a> и соглашаюсь с <a href="#">Политикой обработки персональных данных</a>
-					</div>
-				</div>
-				<div class="uk-width-1-3">
-					<button type="submit" class="uk-button button-intro">Отправить<span class="button-intro__arrow"></span></button>
-				</div>
-			</div>
-		</form>
-	</section>
-
-
-
-
-
-
+	</div>
+</section>
 {/block}

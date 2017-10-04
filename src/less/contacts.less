@@ -5,6 +5,7 @@
 .substrate--contacts {
 	height: 761px;
 }
+
 .contacts__bg-image {
 	width: 1300px;
 	min-height: 600px;
@@ -33,6 +34,12 @@
 		top: 18px;
 		left: 50%;
 		background-color: rgba(255, 255, 255, 0.48);
+	}
+	a {
+		color: #fff;
+		&:hover {
+			color: #fff;
+		}
 	}
 	@media (max-width: @breakpoint-xsmall-max) {
 		position: static;
@@ -100,7 +107,7 @@
 	height: 32px;
 }
 
-.contacts-textarea { 
+.contacts-textarea {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0;
@@ -112,12 +119,12 @@
 	&::-webkit-input-placeholder {
 		.contacts-placeholder;
 	}
-	&::-moz-placeholder { 
+	&::-moz-placeholder {
 		.contacts-placeholder;
-	} 
+	}
 	&:-moz-placeholder {
 		.contacts-placeholder;
-	} 
+	}
 	&:-ms-input-placeholder {
 		.contacts-placeholder;
 	}

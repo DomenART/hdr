@@ -99,5 +99,5 @@ module.exports = {
 	plugins: (plugins || []).concat([
 		new ExtractTextPlugin('[name].css')
 	])
-		
+
 };

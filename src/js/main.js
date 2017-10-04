@@ -8,13 +8,6 @@ import '../less/main.less'
 /*--------------------------------------------------*/
 
 /**
- * axios for ajax requests
- */
-window.axios = require('axios')
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
-window.fade = require('fade')
-
-/**
  * Include Vue
  */
 import Vue from 'vue'
@@ -97,3 +90,27 @@ if (projectItems.length) {
 		}
 	}
 }
+
+/* height-match для пакетов страницы "Цены" */
+
+var packagesText = document.querySelectorAll(".packages-item__text");
+var packagesTitle = document.querySelectorAll(".packages-item__title");
+var packagesDesc = document.querySelectorAll(".packages-item__desc");
+
+function heightMatch(packagesItem) {
+	if (packagesItem) {
+		var packagesItemMax = 0;
+		for (var i = 0; i < packagesItem.length; i++) {
+			if (packagesItemMax < packagesItem[i].offsetHeight) {
+				packagesItemMax = packagesItem[i].offsetHeight
+			}
+		}
+		for (var i = 0; i < packagesItem.length; i++) {
+			packagesItem[i].style.height = packagesItemMax + "px";
+		}
+	}
+}
+
+heightMatch(packagesText);
+heightMatch(packagesTitle);
+heightMatch(packagesDesc);

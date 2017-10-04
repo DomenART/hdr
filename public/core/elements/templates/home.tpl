@@ -21,7 +21,7 @@
 
 	<div class="menu-overlay" uk-toggle="target: html; cls: page--open-menu"></div>
 
-	<div class="menu">		
+	<div class="menu">
 		<div class="menu__bg"></div>
 		<div class="menu__title-bg"></div>
 		<div class="menu__title-text">Меню</div>
@@ -107,13 +107,11 @@
 			<div class="section-about__content">{$_modx->resource.content}</div>
 		</div>
 	</section>
-	
 	<section class="section-comprasion">
 		<div class="uk-container">
 			<comprasion initial-images='{$_modx->resource.comprasion}'></comprasion>
 		</div>
 	</section>
-
 	<section class="section-directions">
 		<div class="uk-container">
 			<div class="uk-grid uk-grid-collapse">
@@ -122,7 +120,7 @@
 						<span class="direction-styles__title">
 							<span>Исторические стили интерьера</span>
 						</span>
-					</a>					
+					</a>
 				</div>
 				<div class="uk-width-1-2@m direction-consult uk-flex">
 					{include 'file:partials/consult.tpl'}
@@ -149,7 +147,7 @@
 						<span class="direction-planning__title">
 							<span>Архитектурное проектирование</span>
 						</span>
-					</a>					
+					</a>
 				</div>
 				<div class="uk-width-1-2@m"></div>
 				<div class="uk-width-1-2@m">
