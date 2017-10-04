@@ -1,0 +1,5 @@
+key: tinymcerte.remove_script_host
+value: '1'
+xtype: combo-boolean
+namespace: tinymcerte
+area: default

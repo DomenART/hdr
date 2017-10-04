@@ -1,0 +1,12 @@
+id: 3
+type: textarea
+name: seo.description
+caption: Описание
+category: SEO
+elements: null
+rank: 2
+default_text: null
+properties: null
+input_properties: null
+output_properties: null
+content: null

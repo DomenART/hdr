@@ -1,6 +1,9 @@
-public/
+public/*
 !public/core/elements/
 !public/assets/template/
+!public/_backup/
+!public/_data/
+!public/.gitify
 node_modules/
 sources/
 *.sublime-project

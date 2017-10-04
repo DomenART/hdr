@@ -1,0 +1,4 @@
+key: ap_hide_templates
+value: '0'
+namespace: adminpanel
+area: ap_main

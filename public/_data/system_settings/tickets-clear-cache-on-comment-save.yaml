@@ -1,0 +1,4 @@
+key: tickets.clear_cache_on_comment_save
+xtype: combo-boolean
+namespace: tickets
+area: tickets.comment

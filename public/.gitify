@@ -1,0 +1,69 @@
+data_directory: _data/
+backup_directory: _backup/
+data:
+    contexts:
+        class: modContext
+        primary: key
+    template_variables:
+        class: modTemplateVar
+        primary: name
+    template_variables_access:
+        class: modTemplateVarTemplate
+        primary:
+            - tmplvarid
+            - templateid
+    content:
+        type: content
+        exclude_keys:
+            - editedby
+            - editedon
+        truncate_on_force:
+            - modTemplateVarResource
+    categories:
+        class: modCategory
+        primary: category
+        truncate_on_force:
+            - modCategoryClosure
+    templates:
+        class: modTemplate
+        primary: templatename
+        extension: .html
+    system_settings:
+        class: modSystemSetting
+        primary: key
+        exclude_keys:
+            - editedon
+    mediasources:
+        class: modMediaSource
+        primary: id
+    mediasource_elements:
+        class: sources.modMediaSourceElement
+        primary:
+            - source
+            - object_class
+            - object
+            - context_key
+packages:
+    modx.com:
+        service_url: 'https://rest.modx.com/extras/'
+        description: 'The official MODX transport provider for 3rd party components.'
+        packages:
+            - fastuploadtv-1.0.0-pl
+            - formit-3.0.3-pl
+            - migx-2.11.0-pl
+            - pthumb-2.3.3-pl
+            - resizer-1.0.1-pl
+            - simpleupdater-2.1.1-beta
+            - tinymcerte-1.2.0-pl
+    modstore.pro:
+        service_url: 'http://modstore.pro/extras/'
+        description: 'Repository of modstore.pro'
+        packages:
+            - ace-1.6.5-pl
+            - adminpanel-1.1.0-pl
+            - ajaxform-1.1.9-pl
+            - debugparser-1.1.0-pl
+            - jevix-1.2.2-pl
+            - pdotools-2.9.2-pl1
+            - tickets-1.8.1-pl
+            - ytranslit-1.2.0-pl

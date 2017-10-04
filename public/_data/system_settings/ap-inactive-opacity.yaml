@@ -1,0 +1,5 @@
+key: ap_inactive_opacity
+value: '9'
+xtype: numberfield
+namespace: adminpanel
+area: ap_style

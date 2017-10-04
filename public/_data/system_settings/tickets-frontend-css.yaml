@@ -1,0 +1,4 @@
+key: tickets.frontend_css
+value: '[[+cssUrl]]web/default.css'
+namespace: tickets
+area: tickets.main

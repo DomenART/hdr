@@ -1,0 +1,4 @@
+key: tinymcerte.browser_spellcheck
+xtype: combo-boolean
+namespace: tinymcerte
+area: default

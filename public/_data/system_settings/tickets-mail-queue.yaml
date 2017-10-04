@@ -1,0 +1,4 @@
+key: tickets.mail_queue
+xtype: combo-boolean
+namespace: tickets
+area: tickets.mail

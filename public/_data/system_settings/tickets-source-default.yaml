@@ -1,0 +1,5 @@
+key: tickets.source_default
+value: '2'
+xtype: modx-combo-source
+namespace: tickets
+area: tickets.main

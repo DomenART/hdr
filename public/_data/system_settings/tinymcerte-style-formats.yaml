@@ -1,0 +1,5 @@
+key: tinymcerte.style_formats
+value: '[{"title": "Headers", "items": "headers_format"},{"title": "Inline", "items": "inline_format"},{"title": "Blocks", "items": "blocks_format"},{"title": "Alignment", "items": "alignment_format"}]'
+xtype: textarea
+namespace: tinymcerte
+area: tinymcerte.style_formats

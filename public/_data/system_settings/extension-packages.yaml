@@ -1,0 +1,3 @@
+key: extension_packages
+value: '[{"tickets":{"path":"[[++core_path]]components/tickets/model/"}}]'
+area: system
