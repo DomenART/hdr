@@ -11,7 +11,39 @@
 	overflow: hidden;
 }
 
+ul {
+	list-style-image: url('../img/list-marker.svg');
+	padding-left: 100px;
+	@media (max-width: @breakpoint-xsmall-max) {
+		padding-left: 50px;
+	}
+}
+
+table {
+	width: 100%;
+	height: auto;
+	cellspacing: 0;
+	border-collapse: collapse;
+	div {
+		color: #999999;
+	}
+}
+
+th {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 40px 0;
+	color: #333333;
+	font-weight: 500;
+}
+
+td {
+	padding: 25px 0;
+	border-bottom: 1px solid #ede8e8;
+}
+
 .pagetitle {
+	max-width: 800px;
 	margin: 0 auto 113px;
 	text-align: center;
 	color: #373736;

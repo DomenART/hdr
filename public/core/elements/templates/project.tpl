@@ -1,6 +1,6 @@
 {extends 'file:templates/base.tpl'}
 {block 'content'}
-<header class="project-header" style="background: url('{$_modx->resource['project_image']}') no-repeat 50% 50%; background-size: cover">
+<header class="project-header" style="background: url('{$_modx->resource['project.image']}') no-repeat 50% 50%; background-size: cover">
 	<div class="uk-container">
 		<div class="breadcrumb breadcrumb--white uk-flex uk-flex-center">
 		    {'pdoCrumbs' | snippet : [
@@ -20,7 +20,7 @@
 					{$publishedon | date_format : '%Y'}
 				</div>
 				<div class="project-bar__desc">
-					{$_modx->resource.introtext}
+					{$_modx->resource.introtext | nl2br }
 				</div>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 	<div class="project-pool">
 		<div class="uk-grid uk-grid-collapse uk-child-width-1-2@s uk-flex uk-flex-bottom">
 			<div id="project-pool-left">
-				{foreach $_modx->resource['project.item'] | json_decode as $row}
+				{foreach $_modx->resource['project.album'] | json_decode as $row}
 				<div class="project-item js-project-item">
 					<img src="{$row.image}" alt="">
 					{if $row['text']}

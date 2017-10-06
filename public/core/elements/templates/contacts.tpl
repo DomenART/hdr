@@ -9,7 +9,7 @@
 	</div>
 	<h1 class="pagetitle">{$_modx->resource.longtitle ?: $_modx->resource.pagetitle}</h1>
 	<div class="contacts">
-		<div class="contacts__bg-image" style="background: url('{$_modx->resource['contacts.bg-image']}') no-repeat 50% 50%"></div>
+		<div class="contacts__bg-image" style="background: url('{$_modx->resource['contacts.image']}') no-repeat 50% 50%"></div>
 		<address class="contacts-info">
 			<div class="uk-grid uk-grid-collapse uk-child-width-1-2@s">
 				<div>
