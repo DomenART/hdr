@@ -1,4 +1,0 @@
-key: tickets.date_format
-value: '%d.%m.%y <small>%H:%M</small>'
-namespace: tickets
-area: tickets.main

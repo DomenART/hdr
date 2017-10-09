@@ -1,47 +1,19 @@
 {extends 'file:templates/base.tpl'}
 
 {block 'content'}
-	<div class="toolbar uk-flex uk-flex-middle">
-		<a href="/" class="toolbar__sitename">
-			<span>House Room<br>Design</span>
-		</a>
-		<div class="toolbar__contacts">
-			<span>Севастополь: +7(978) 070 43 33</span>
-			<span>Москва: +7 (985) 875 29 17</span>
-		</div>
-		<div class="toolbar__social">
-			<div class="social-links">
-				<a href="#" class="social-links__item social-links__item--twitter"></a>
-				<a href="#" class="social-links__item social-links__item--vk"></a>
-				<a href="#" class="social-links__item social-links__item--instagram"></a>
-				<a href="#" class="social-links__item social-links__item--youtube"></a>
-			</div>
-		</div>
-	</div>
-
-	<div class="menu-overlay" uk-toggle="target: html; cls: page--open-menu"></div>
-
-	<div class="menu">
-		<div class="menu__bg"></div>
-		<div class="menu__title-bg"></div>
-		<div class="menu__title-text">Меню</div>
-		<div class="menu__toggle" uk-toggle="target: html; cls: page--open-menu">
-			<div class="menu__toggle__logo"></div>
-			<div class="menu__toggle__icon">
-				<i></i>
-				<i></i>
-				<i></i>
-			</div>
-		</div>
-		<div class="menu__close" uk-toggle="target: html; cls: page--open-menu"></div>
-		{'pdoMenu' | snippet : [
-			'level' => 1,
-			'parents' => 0,
-			'outerClass' => 'menu__list'
-		]}
-	</div>
-
 	<section class="slideshow" id="slideshow">
+		{*var $slides = $_modx->getResources(
+			['published' => 1, 'deleted' => 0],
+			[
+				'sortby' => 'menuindex',
+				'sortdir' => 'ASC',
+				'limit' => 0,
+				'parents' => ('page.slideshow' | config)
+			]
+		)}
+		{foreach $slides as $slide}
+		{$_modx->getChunk('@INLINE <p>{$id} {$pagetitle}</p>', $slide)}
+		{/foreach*}
 		<ul class="uk-hidden" uk-switcher="connect: .js-slideshow">
 			<li></li>
 			<li></li>
@@ -100,6 +72,9 @@
 			<a href="#second" class="slide-bar__arrow" uk-scroll><i uk-icon="icon: arrow-down; ratio: 1.2"></i></a>
 		</div>
 	</section>
+
+
+	{$.env | print}
 	
 	<section class="section-about" id="second">
 		<div class="uk-container">
@@ -113,6 +88,7 @@
 			<comprasion initial-images='{$_modx->resource.comprasion}'></comprasion>
 		</div>
 	</section>
+	
 	<section class="section-directions">
 		<div class="uk-container">
 			<div class="uk-grid uk-grid-collapse">
@@ -360,95 +336,4 @@
 			</div>
 		</div>
 	</section>
-
-	<footer class="section-footer">
-		<section class="footer-first uk-container">
-			<div class="uk-grid" uk-grid>
-				<div class="uk-width-2-5@m">
-					<a href="/"><img src="assets/template/img/logo-footer.png" alt="" class="footer__logo"></a>
-					<ul class="footer__rights">
-						<li><a href="#">Пользовательское соглашение</a></li>
-						<li><a href="#">Политика обработки персональных данных</a></li>
-					</ul>
-				</div>
-
-				<div class="uk-width-3-5@m">
-					<div class="uk-grid" uk-grid>
-						<div class="uk-width-1-2@s uk-width-expand@m">
-							<div class="footer__title">Наш офис</div>
-							<table class="footer__contacts">
-								<tr>
-									<td>Севастополь:</td>
-									<td>
-										+7 (978) 070-43-33<br> +7 (978) 042-24-43
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2"><br></td>
-								</tr>
-								<tr>
-									<td>Москва:</td>
-									<td>+7 (985) 875-29-17</td>
-								</tr>
-								<tr>
-									<td colspan="2"><br></td>
-								</tr>
-								<tr>
-									<td>E-mail:</td>
-									<td><a href="mailto:info@gerabyte.ru">info@gerabyte.ru</a></td>
-								</tr>
-							</table>
-						</div>
-
-						<div class="uk-width-1-2@s uk-width-1-4@m">
-							<div class="footer__title">Время работы</div>
-							<table class="footer__contacts">
-								<tr>
-									<td>Пн-пт:</td>
-									<td>
-										с 10:00 до 19:00
-									</td>
-								</tr>
-								<tr>
-									<td>Сб-вс:</td>
-									<td>Выходные</td>
-								</tr>
-							</table>
-						</div>
-
-						<div class="uk-width-1-2@s uk-width-1-4@m">
-							<div class="footer__title">Портфолио</div>
-							<ul class="footer__menu">
-								<li><a href="#">Кафе, рестораны и т.д.</a></li>
-								<li><a href="#">Современные</a></li>
-								<li><a href="#">Прованс</a></li>
-								<li><a href="#">Классические</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="footer-second uk-container">
-			<div class="uk-grid uk-flex-middle" uk-grid>
-				<div class="uk-width-2-5@m">
-					<div class="footer__copyright">©2017, Студия дизайна GERABYTE: дизайн-проекты квартир, загородных домов, офисов, коммерческой недвижимости, общественных заведений, магазинов, ресторанов и кафе</div>
-					<div></div>
-				</div>
-
-				<div class="uk-width-3-5@m">
-					<div class="footer__right uk-flex uk-flex-between uk-flex-middle">
-						<div class="uk-flex uk-flex-between uk-flex-middle uk-width-1-1 uk-width-auto@s">
-							<a href="#" class="footer__sitemap">Карта сайта</a>
-							<div class="footer__counters">
-								[^t^]
-							</div>
-						</div>
-						<a href="http://domenart-studio.ru" class="footer__creator" target="_blank">Разработка сайта</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</footer>
 {/block}

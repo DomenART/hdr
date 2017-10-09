@@ -1,5 +1,0 @@
-key: tickets.mail_bcc_level
-value: '1'
-xtype: numberfield
-namespace: tickets
-area: tickets.mail

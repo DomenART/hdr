@@ -1,4 +1,0 @@
-key: friendly_alias_ytranslit_timeout
-value: '1'
-xtype: numberfield
-namespace: ytranslit

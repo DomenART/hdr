@@ -1,5 +1,0 @@
-key: tickets.comment_edit_time
-value: '600'
-xtype: numberfield
-namespace: tickets
-area: tickets.comment

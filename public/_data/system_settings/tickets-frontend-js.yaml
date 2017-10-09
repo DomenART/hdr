@@ -1,4 +1,0 @@
-key: tickets.frontend_js
-value: '[[+jsUrl]]web/default.js'
-namespace: tickets
-area: tickets.main

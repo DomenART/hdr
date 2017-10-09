@@ -1,4 +1,0 @@
-key: ap_frontend_css
-value: '[[+assetsUrl]]css/default.css'
-namespace: adminpanel
-area: ap_style

@@ -3,12 +3,30 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# установка зависимостей
 npm install
 
-# with watch
+# хапуск сборки для разработки
 npm run dev
 
-# build for production with minification
+# запуск сборки для продакшена
 npm run build
+```
+## Gitify
+
+``` bash
+# 1. Заходим в контейнер докера
+docker-compose exec --user $(id -u) php bash
+
+# 2. Заходим в папку с проектом
+cd hdr.dev/public
+
+# 3. Импортируем базу
+../../Gitify build
+
+# 4. Экспортируем базу
+../../Gitify extract
+
+# 5. Выходим из контейнера
+exit
 ```

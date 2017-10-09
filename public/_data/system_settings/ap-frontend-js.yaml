@@ -1,4 +1,0 @@
-key: ap_frontend_js
-value: '[[+assetsUrl]]js/default.js'
-namespace: adminpanel
-area: ap_style

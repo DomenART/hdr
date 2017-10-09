@@ -1,4 +1,0 @@
-key: tickets.default_template
-xtype: modx-combo-template
-namespace: tickets
-area: tickets.ticket

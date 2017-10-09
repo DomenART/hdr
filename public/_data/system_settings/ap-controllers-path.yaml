@@ -1,4 +1,0 @@
-key: ap_controllers_path
-value: '[[+corePath]]controllers/'
-namespace: adminpanel
-area: ap_main

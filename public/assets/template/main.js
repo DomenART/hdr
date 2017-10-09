@@ -7020,8 +7020,13 @@ var _uikitIcons2 = _interopRequireDefault(_uikitIcons);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* import files */
+<<<<<<< Updated upstream
 __webpack_require__(138);
 __webpack_require__(177);
+=======
+__webpack_require__(137);
+__webpack_require__(169);
+>>>>>>> Stashed changes
 
 /* import styles */
 
@@ -36924,6 +36929,7 @@ return plugin;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+<<<<<<< Updated upstream
 	"./article-bg.jpg": 139,
 	"./bg-textarea.png": 84,
 	"./compare-1.jpg": 140,
@@ -36977,6 +36983,53 @@ var map = {
 	"./working-2.jpg": 174,
 	"./working-3.jpg": 175,
 	"./working-4.jpg": 176
+=======
+	"./bg-textarea.png": 83,
+	"./compare-1.jpg": 138,
+	"./compare-2.jpg": 139,
+	"./compare-3.jpg": 140,
+	"./compare-4.jpg": 141,
+	"./composition-slider.png": 142,
+	"./creator.png": 82,
+	"./cube.svg": 143,
+	"./direction-1.jpg": 79,
+	"./direction-2.jpg": 80,
+	"./direction-3.jpg": 81,
+	"./graphic-design.svg": 144,
+	"./header-project.jpg": 145,
+	"./icon-arrow-left.png": 146,
+	"./icon-arrow-left.svg": 90,
+	"./icon-arrow-right.png": 147,
+	"./icon-arrow-right.svg": 91,
+	"./icon-instagram.png": 77,
+	"./icon-twitter.png": 75,
+	"./icon-vk.png": 76,
+	"./icon-youtube.png": 78,
+	"./life-1.jpg": 148,
+	"./life-2.jpg": 149,
+	"./life-3.jpg": 150,
+	"./life-4.jpg": 151,
+	"./logo-circle.png": 74,
+	"./logo-footer.png": 152,
+	"./logo-small.png": 73,
+	"./portfolio-item.jpg": 153,
+	"./portfolio.svg": 154,
+	"./project-1.jpg": 155,
+	"./project-2.jpg": 156,
+	"./project-3.jpg": 157,
+	"./project-4.jpg": 158,
+	"./project-arr-left.svg": 159,
+	"./project-arr-right.svg": 160,
+	"./select-icon.svg": 84,
+	"./service-image-1.jpg": 161,
+	"./services-image-2.jpg": 162,
+	"./services-image-3.jpg": 163,
+	"./spacer.gif": 164,
+	"./working-1.jpg": 165,
+	"./working-2.jpg": 166,
+	"./working-3.jpg": 167,
+	"./working-4.jpg": 168
+>>>>>>> Stashed changes
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -37172,6 +37225,7 @@ module.exports = __webpack_require__.p + "img/services-image-3.jpg?46898a929f31e
 /* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< Updated upstream
 module.exports = __webpack_require__.p + "img/slice-4.jpg?e7bee98e02922613f873a325b99a0879";
 
 /***/ }),
@@ -37200,29 +37254,48 @@ module.exports = __webpack_require__.p + "img/spacer.gif?bbfd7b49dc892a72a8a87d8
 
 /***/ }),
 /* 173 */
+=======
+module.exports = __webpack_require__.p + "img/spacer.gif?bbfd7b49dc892a72a8a87d8d1ae3e4ee";
+
+/***/ }),
+/* 165 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/working-1.jpg?400352f4522bdccb7f30dab826d1f9ae";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 174 */
+=======
+/* 166 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/working-2.jpg?16ba9677f7ba67ec38d930676f8a4e06";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 175 */
+=======
+/* 167 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/working-3.jpg?0ca0b275307a832110af193e5a18279c";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 176 */
+=======
+/* 168 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/working-4.jpg?a37c03728749b26b4c06aea0ad2a90d3";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -37249,6 +37322,34 @@ var map = {
 	"./MuseoSansLightItalic/MuseoSansLightItalic.eot": 197,
 	"./MuseoSansLightItalic/MuseoSansLightItalic.ttf": 198,
 	"./MuseoSansLightItalic/MuseoSansLightItalic.woff": 199,
+=======
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./MuseoSansBlack/MuseoSansBlack.eot": 170,
+	"./MuseoSansBlack/MuseoSansBlack.ttf": 171,
+	"./MuseoSansBlack/MuseoSansBlack.woff": 172,
+	"./MuseoSansBlackItalic/MuseoSansBlackItalic.eot": 173,
+	"./MuseoSansBlackItalic/MuseoSansBlackItalic.otf": 174,
+	"./MuseoSansBlackItalic/MuseoSansBlackItalic.ttf": 175,
+	"./MuseoSansBlackItalic/MuseoSansBlackItalic.woff": 176,
+	"./MuseoSansBold/MuseoSansBold.eot": 177,
+	"./MuseoSansBold/MuseoSansBold.ttf": 178,
+	"./MuseoSansBold/MuseoSansBold.woff": 179,
+	"./MuseoSansBoldItalic/MuseoSansBoldItalic.eot": 180,
+	"./MuseoSansBoldItalic/MuseoSansBoldItalic.ttf": 181,
+	"./MuseoSansBoldItalic/MuseoSansBoldItalic.woff": 182,
+	"./MuseoSansItalic/MuseoSansItalic.eot": 183,
+	"./MuseoSansItalic/MuseoSansItalic.ttf": 184,
+	"./MuseoSansItalic/MuseoSansItalic.woff": 185,
+	"./MuseoSansLight/MuseoSansLight.eot": 186,
+	"./MuseoSansLight/MuseoSansLight.ttf": 187,
+	"./MuseoSansLight/MuseoSansLight.woff": 188,
+	"./MuseoSansLightItalic/MuseoSansLightItalic.eot": 189,
+	"./MuseoSansLightItalic/MuseoSansLightItalic.ttf": 190,
+	"./MuseoSansLightItalic/MuseoSansLightItalic.woff": 191,
+>>>>>>> Stashed changes
 	"./MuseoSansMedium/MuseoSansMedium.eot": 67,
 	"./MuseoSansMedium/MuseoSansMedium.ttf": 69,
 	"./MuseoSansMedium/MuseoSansMedium.woff": 68,
@@ -37273,136 +37374,227 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
+<<<<<<< Updated upstream
 webpackContext.id = 177;
 
 /***/ }),
 /* 178 */
+=======
+webpackContext.id = 169;
+
+/***/ }),
+/* 170 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlack.eot?9d94b7eaedb634be56f0718ee3c0d2c2";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 179 */
+=======
+/* 171 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlack.ttf?1808b5f6b2dd330757f13c6dc3ddf32a";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 180 */
+=======
+/* 172 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlack.woff?d403436eee6af142bb056eaecb76805d";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 181 */
+=======
+/* 173 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlackItalic.eot?a35410eaecad6f342fa94c4d7393f87d";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 182 */
+=======
+/* 174 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlackItalic.otf?2b3b87a2a82e82dee6a04fdd8aca3208";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 183 */
+=======
+/* 175 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlackItalic.ttf?0a5b4020e8b4c21f2eafd080fb5616a7";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 184 */
+=======
+/* 176 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBlackItalic.woff?54b8596581343128cd3e84786c1a6cbb";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 185 */
+=======
+/* 177 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBold.eot?b6a25a9b8ae3bd903f71a761f1a6e4bd";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 186 */
+=======
+/* 178 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBold.ttf?2f1535ec92e27193cc13e35495cd845e";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 187 */
+=======
+/* 179 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBold.woff?6a54f6727e1dfd8538bbb4ab224c311f";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 188 */
+=======
+/* 180 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBoldItalic.eot?c88b6f44bf2804a3004d89123bca31e6";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 189 */
+=======
+/* 181 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBoldItalic.ttf?a73499db7228ae1cfea844211563bb56";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 190 */
+=======
+/* 182 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansBoldItalic.woff?752db9aaf13e3ceebe68aff07d9c1ec1";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 191 */
+=======
+/* 183 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansItalic.eot?35922fc68d49749684a73cc9621aa7d8";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 192 */
+=======
+/* 184 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansItalic.ttf?5d8cd4ac0155fb225e6cf98fcc4be228";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 193 */
+=======
+/* 185 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansItalic.woff?0b5c3627daf33aae8b4d2c9976f38300";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 194 */
+=======
+/* 186 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansLight.eot?e8adc41247ec44f51d1cead8fdf45b73";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 195 */
+=======
+/* 187 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansLight.ttf?3258ca8bb3a1861325c63ec376c3941a";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 196 */
+=======
+/* 188 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansLight.woff?e386bd26958d7169f69e43d56416a1fd";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 197 */
+=======
+/* 189 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansLightItalic.eot?0ce9f116758d48a1494ec25c0bf92712";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 198 */
+=======
+/* 190 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansLightItalic.ttf?e18c9957f7875aef8a74fe577ee3ac38";
 
 /***/ }),
+<<<<<<< Updated upstream
 /* 199 */
+=======
+/* 191 */
+>>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/MuseoSansLightItalic.woff?b71e680a0e5005382d72b2e491c22375";

@@ -1,5 +1,0 @@
-key: fastuploadtv.check_resid
-value: '1'
-xtype: combo-boolean
-namespace: fastuploadtv
-area: Default

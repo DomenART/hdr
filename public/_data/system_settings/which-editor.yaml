@@ -1,4 +1,0 @@
-key: which_editor
-value: 'TinyMCE RTE'
-xtype: modx-combo-rte
-area: editor
