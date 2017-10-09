@@ -60,20 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-<<<<<<< Updated upstream
 /******/ 	return __webpack_require__(__webpack_require__.s = 200);
-=======
-/******/ 	return __webpack_require__(__webpack_require__.s = 192);
->>>>>>> Stashed changes
 /******/ })
 /************************************************************************/
 /******/ ({
 
-<<<<<<< Updated upstream
 /***/ 200:
-=======
-/***/ 192:
->>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -81,11 +73,7 @@
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-<<<<<<< Updated upstream
 var queryString = __webpack_require__(201);
-=======
-var queryString = __webpack_require__(193);
->>>>>>> Stashed changes
 
 if (typeof pdoPage == 'undefined') {
     pdoPage = { callbacks: {}, keys: {}, configs: {} };
@@ -449,24 +437,14 @@ if (typeof jQuery == 'undefined') {
 
 /***/ }),
 
-<<<<<<< Updated upstream
 /***/ 201:
-=======
-/***/ 193:
->>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-<<<<<<< Updated upstream
 var strictUriEncode = __webpack_require__(202);
 var objectAssign = __webpack_require__(203);
 var decodeComponent = __webpack_require__(204);
-=======
-var strictUriEncode = __webpack_require__(194);
-var objectAssign = __webpack_require__(195);
-var decodeComponent = __webpack_require__(196);
->>>>>>> Stashed changes
 
 function encoderForArrayFormat(opts) {
 	switch (opts.arrayFormat) {
@@ -673,11 +651,7 @@ exports.stringify = function (obj, opts) {
 
 /***/ }),
 
-<<<<<<< Updated upstream
 /***/ 202:
-=======
-/***/ 194:
->>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -691,11 +665,7 @@ module.exports = function (str) {
 
 /***/ }),
 
-<<<<<<< Updated upstream
 /***/ 203:
-=======
-/***/ 195:
->>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -793,11 +763,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
-<<<<<<< Updated upstream
 /***/ 204:
-=======
-/***/ 196:
->>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

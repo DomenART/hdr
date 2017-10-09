@@ -1,17 +1,25 @@
+.pagetitle--article {
+    margin-bottom: 60px;
+}
+
 .article-header {
     background-color: #f7f7f4;
 }
 
 .article-promo {
-    position: relative;
-}
-
-.article-promo__image {
     width: 1300px;
     height: auto;
     position: relative;
     top: 0;
-    right: 0;
+    left: -100px;
+    font-size: 14px;
+    a:hover {
+        color: #fff;
+    }
+    @media (max-width: 1300px) {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .article-promo__info {
@@ -22,7 +30,7 @@
     right: 0;
     background-color: #4d4d4c;
     & > div {
-        margin: 45px 0;
+        margin: 40px 0;
     }
     & > div:first-of-type {
         border-right: 1px solid #a2a2a1;
@@ -37,6 +45,8 @@
 }
 
 .article-promo__date {
+    margin-left: 25px;
+    margin-right: 36px;
     font-size: 14px;
     color: #fff;
 }
@@ -54,15 +64,63 @@
 }
 
 .article-promo__like {
+    margin-left: 13px;
+    padding-left: 19px;
     color: #999999;
+    position: relative;
+    &:hover {
+        text-decoration: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 16px;
+        height: 15px;
+        transform: translateY(-50%);
+        background: url('../img/icon-like.svg') 50% 50% no-repeat;
+    }
 }
 
 .article-promo__comment {
+    padding-left: 20px;
     color: #999999;
+    position: relative;
+    &:hover {
+        text-decoration: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 16px;
+        height: 15px;
+        transform: translateY(-50%);
+        background: url('../img/icon-comment.svg') 50% 50% no-repeat;
+
+    }
 }
 
 .article-promo__view {
+    padding-left: 25px;
     color: #999999;
+    position: relative;
+    &:hover {
+        text-decoration: none;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 15px;
+        transform: translateY(-50%);
+        background: url('../img/icon-view.svg') 50% 50% no-repeat;
+
+    }
 }
 
 .article-promo__nav {
@@ -74,7 +132,7 @@
     span {
         color: #999999;
         &:first-of-type {
-            margin-right: 35px;
+            margin-right: 20px;
         }
     }
 }
@@ -94,6 +152,23 @@
 
 .article-content {
     position: relative;
+    a:visited {
+        color: #cc99cc;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 100px;
+        li::before {
+            content: '';
+            padding-left: 25px;
+            width: 8px;
+            height: 8px;
+            background: url('../img/list-marker.svg') 50% 50% no-repeat;
+        }
+        @media (max-width: @breakpoint-xsmall-max) {
+            padding-left: 50px;
+        }
+    }
 }
 
 .article__special-block {
@@ -104,6 +179,12 @@
     margin: 67px 0 80px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid #f8f8f8;
+    a {
+        font-size: 13px;
+        &:hover {
+            color: #999999;
+        }
+    }
     & > div > div  {
         padding: 20px 0;
     }
@@ -112,11 +193,13 @@
 a.article-control__link {
     margin-left: 40px;
     color: #000000;
-    font-size: 14px;
     line-height: 1;
     text-decoration: none;
     border-bottom: 1px dotted #000000;
     position: relative;
+    &:hover {
+        color: lighten(#000000, 50%);
+    }
     span {
         position: absolute;
         left: -25px;
@@ -126,8 +209,8 @@ a.article-control__link {
 }
 
 .article-control__nav {
-    span:first-of-type {
-        margin-right: 35px;
+    a:first-of-type {
+        margin-right: 25px;
     }
     svg {
         color: #000000;
@@ -155,6 +238,9 @@ a.article-control__link {
 
 .readmore-item__image {
     margin-bottom: 19px;
+    @media (max-width: @breakpoint-xsmall-max) {
+        margin-bottom: 5px;
+    }
 }
 
 .readmore-item__date {
@@ -162,6 +248,9 @@ a.article-control__link {
     color: #333333;
     font-size: 12px;
     line-height: 1;
+    @media (max-width: @breakpoint-xsmall-max) {
+        margin-bottom: 5px;
+    }
 }
 
 .readmore-item__title {   
@@ -206,6 +295,10 @@ a.edit {
     padding-top: 47px;
     padding-bottom: 37px;
     background-color: #f5f5f5;
+    @media (max-width: @breakpoint-xsmall-max) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .comment-form {
@@ -250,6 +343,7 @@ a.edit {
     letter-spacing: 0.6px;
     @media (max-width: @breakpoint-xsmall-max) {
         margin-left: 0;
+        font-size: 18px;
     }
 }
 
